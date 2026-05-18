@@ -12,7 +12,7 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import completeData from "../src/data/completeData.json";
-import vectorimage from '../assets/ctavector.png'
+import vectorimage from '../assets/faqvectorreal.png'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -102,6 +102,12 @@ const Icons = {
   TreePine: () => (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
       <path d="M12 2L19 12H16V22H8V12H5L12 2Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  ),
+  CheckCircle: ({ className }: { className?: string }) => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className={className}>
+      <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" />
+      <path d="M8 12l3 3 5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   ),
   ArrowRight: () => (
@@ -269,7 +275,7 @@ const AccordionItem = ({ item, index, isOpen, onToggle }: { item: any; index: nu
         transition={{ duration: 0.3 }}
       >
         <span className={`
-          text-[90px] font-black leading-none tracking-tighter
+          text-[90px] font-bold leading-none tracking-tighter
           ${isOpen ? 'text-primary/15' : 'text-muted-foreground/20'}
           transition-colors duration-500
         `}>
@@ -283,7 +289,7 @@ const AccordionItem = ({ item, index, isOpen, onToggle }: { item: any; index: nu
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={handleMouseLeave}
         className={`
-          relative bg-card/90 backdrop-blur-sm rounded-2xl
+          relative bg-white/90 backdrop-blur-sm rounded-2xl
           border transition-all duration-500
           ${isOpen
             ? 'border-primary/30 shadow-2xl shadow-primary/15'
@@ -549,7 +555,7 @@ const CategoryFilter = ({ categories, activeCategory, onCategoryChange }: { cate
               relative px-4 py-2 md:px-5 md:py-2.5 rounded-full text-xs md:text-sm font-medium transition-all duration-300
               ${activeCategory === category.id
                 ? 'text-white'
-                : 'text-muted-foreground hover:text-card-foreground bg-card/50 hover:bg-primary/5'
+                : 'text-muted-foreground hover:text-card-foreground bg-white/50 hover:bg-primary/5'
               }
             `}
           >
@@ -587,7 +593,7 @@ const SearchBar = ({ onSearch }: { onSearch: (query: string) => void }) => {
       `}
     >
       <div className={`
-        relative flex items-center bg-card rounded-full border transition-all duration-300
+        relative flex items-center bg-white rounded-full border transition-all duration-300
         ${isFocused
           ? 'border-primary shadow-lg shadow-primary/10'
           : 'border-border hover:border-border/80 shadow-md'
@@ -623,25 +629,7 @@ const SearchBar = ({ onSearch }: { onSearch: (query: string) => void }) => {
 };
 
 const KnowledgeCard = () => {
-  const [isHovered, setIsHovered] = useState(false);
   const { knowledgeCard } = completeData.faq;
-  const prefersReducedMotion = useReducedMotion();
-
-  const floatAnimation = prefersReducedMotion
-    ? {}
-    : {
-      initial: { y: 0, opacity: 1 },
-      animate: {
-        y: [0, -12, 0],
-        transition: {
-          y: {
-            repeat: Infinity,
-            duration: 4,
-            ease: "easeInOut",
-          },
-        },
-      },
-    };
 
   return (
     <div className="relative mt-16 md:mt-24 lg:mt-32">
@@ -650,26 +638,38 @@ const KnowledgeCard = () => {
         {/* Cinematic Background Layer */}
         <div
           className="absolute inset-0"
-          style={{
-            background: "linear-gradient(145deg, #450505 0%, #7c0a0a 50%, #450505 100%)"
-          }}
+          style={{ background: "linear-gradient(135deg, hsl(217 78% 8%) 0%, hsl(221 84% 15%) 50%, hsl(217 78% 5%) 100%)" }}
         />
 
-        {/* Technical Grid Pattern */}
-        <div 
-          className="absolute inset-0 opacity-[0.15]" 
-          style={{ 
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-            backgroundSize: '40px 40px'
-          }}
-        />
+        {/* Grid lines — white so they're visible on red bg */}
+        <div className="absolute inset-0 pointer-events-none" style={{
+          backgroundImage: `linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+                            linear-gradient(to right, rgba(255,255,255,0.08) 1px, transparent 1px)`,
+          backgroundSize: "48px 48px",
+        }} />
 
-        {/* Ambient Glow Effects */}
-        <div className="hidden md:block absolute right-[10%] top-[10%] w-[400px] h-[400px] bg-white/5 blur-[140px] rounded-full pointer-events-none" />
-        <div className="hidden md:block absolute left-[5%] bottom-[20%] w-[250px] h-[250px] bg-black/40 blur-[100px] rounded-full pointer-events-none" />
+        {/* Diagonal accent lines */}
+        <div className="absolute inset-0 pointer-events-none opacity-[0.07]" style={{
+          backgroundImage: "repeating-linear-gradient(60deg, #ffffff 0px, #ffffff 1px, transparent 1px, transparent 60px)",
+        }} />
 
-        {/* Vignette Overlay */}
-        <div className="absolute inset-0 rounded-3xl bg-[radial-gradient(circle,transparent_40%,rgba(0,0,0,0.6))]" />
+        {/* Top-right radial glow — warm highlight */}
+        <div className="absolute -top-24 -right-24 w-[480px] h-[480px] pointer-events-none"
+          style={{ background: "radial-gradient(ellipse, hsla(var(--secondary), 0.3) 0%, transparent 65%)" }} />
+
+        {/* Bottom-left dark shadow glow */}
+        <div className="absolute -bottom-24 -left-24 w-[400px] h-[400px] pointer-events-none"
+          style={{ background: "radial-gradient(ellipse, rgba(0,0,0,0.35) 0%, transparent 70%)" }} />
+
+        {/* Centre horizontal glow strip */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+                        w-[700px] h-[180px] pointer-events-none"
+          style={{ background: "radial-gradient(ellipse, hsla(var(--accent), 0.1) 0%, transparent 65%)" }} />
+
+        {/* Inset border */}
+        <div className="absolute inset-0 rounded-3xl pointer-events-none" style={{
+          boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.12), 0 32px 80px -16px hsla(var(--primary), 0.6)",
+        }} />
 
         {/* Main Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-12 md:py-16 lg:py-20">
@@ -767,32 +767,6 @@ const KnowledgeCard = () => {
 
           {/* Mobile Layout - Centered text with vector above */}
           <div className="md:hidden">
-            {/* Mobile Vector Image - Top */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative mb-8"
-            >
-              <motion.div
-                animate={{
-                  y: [0, -8, 0],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="w-full max-w-[280px] sm:max-w-[350px] mx-auto"
-              >
-                <img
-                  src={faqvector}
-                  alt="FAQ Support"
-                  className="w-full h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
-                />
-              </motion.div>
-            </motion.div>
 
             {/* Mobile Text Content */}
             <div className="text-center">
@@ -935,7 +909,7 @@ const FAQ = () => {
           <span className="text-xs font-medium tracking-[0.2em] uppercase text-primary mb-3 block">
             {section.badge}
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium text-black mb-4">
             {section.headline}
           </h2>
           <p className="text-muted-foreground text-base md:text-lg">

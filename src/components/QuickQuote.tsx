@@ -37,7 +37,7 @@ const QuickQuote = () => {
         setIsSubmitting(true);
 
         const emailContent = `
-🏠 NEW QUICK QUOTE REQUEST - Apex Roofing & Solar
+🏠 NEW QUICK QUOTE REQUEST - L&M Services
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -61,7 +61,7 @@ ${formData.message}
 
         try {
             try {
-                const response = await fetch('https://formsubmit.co/ajax/Luis@apexroofingandsolar.com', {
+                const response = await fetch('https://formsubmit.co/ajax/estimate@l-mservices.com', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -87,13 +87,13 @@ ${formData.message}
                 console.log('FormSubmit failed, using mailto fallback');
             }
 
-            const mailtoLink = `mailto:Luis@apexroofingandsolar.com?subject=🏠 Quick Quote - ${formData.name}&body=${encodeURIComponent(emailContent)}`;
+            const mailtoLink = `mailto:estimate@l-mservices.com?subject=🏠 Quick Quote - ${formData.name}&body=${encodeURIComponent(emailContent)}`;
             window.location.href = mailtoLink;
             showSuccess();
 
         } catch (error) {
             console.error('Submission error:', error);
-            alert('Please email us directly at Luis@apexroofingandsolar.com');
+            alert('Please email us directly at estimate@l-mservices.com');
         } finally {
             setIsSubmitting(false);
         }
@@ -303,7 +303,7 @@ ${formData.message}
                                     }}
                                 />
 
-                                <div className="relative bg-card rounded-3xl shadow-2xl overflow-hidden border border-primary/10">
+                                <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border border-primary/10">
                                     <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-primary/5 to-transparent" />
 
                                     <div className="absolute top-0 left-0 w-20 h-20 border-t-2 border-l-2 border-primary/20 rounded-tl-3xl" />
@@ -324,7 +324,7 @@ ${formData.message}
                                                 initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
                                                 animate={{ opacity: 1, backdropFilter: "blur(8px)" }}
                                                 exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
-                                                className="absolute inset-0 bg-card/90 z-20 flex flex-col items-center justify-center p-8"
+                                                className="absolute inset-0 bg-white/90 z-20 flex flex-col items-center justify-center p-8"
                                             >
                                                 <motion.div
                                                     initial={{ scale: 0, rotate: -180 }}
@@ -353,7 +353,7 @@ ${formData.message}
                                                     initial={{ y: 20, opacity: 0 }}
                                                     animate={{ y: 0, opacity: 1 }}
                                                     transition={{ delay: 0.3 }}
-                                                    className="text-2xl font-bold text-foreground mb-2"
+                                                    className="text-2xl font-bold text-black mb-2"
                                                 >
                                                     Quote Request Sent!
                                                 </motion.h3>
@@ -469,7 +469,7 @@ ${formData.message}
                                                         className="space-y-4"
                                                     >
                                                         <div>
-                                                            <label className="block text-sm font-medium text-foreground mb-2">
+                                                            <label className="block text-sm font-medium text-black mb-2">
                                                                 <User className="w-4 h-4 inline mr-2 text-primary" />
                                                                 Your Name
                                                             </label>
@@ -479,12 +479,12 @@ ${formData.message}
                                                                 value={formData.name}
                                                                 onChange={handleInputChange}
                                                                 required
-                                                                className="w-full px-5 py-4 bg-muted border border-border rounded-xl focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all text-foreground"
+                                                                className="w-full px-5 py-4 bg-muted border border-border rounded-xl focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all text-black"
                                                                 placeholder="John Doe"
                                                             />
                                                         </div>
                                                         <div>
-                                                            <label className="block text-sm font-medium text-foreground mb-2">
+                                                            <label className="block text-sm font-medium text-black mb-2">
                                                                 <Mail className="w-4 h-4 inline mr-2 text-primary" />
                                                                 Email Address
                                                             </label>
@@ -494,7 +494,7 @@ ${formData.message}
                                                                 value={formData.email}
                                                                 onChange={handleInputChange}
                                                                 required
-                                                                className="w-full px-5 py-4 bg-muted border border-border rounded-xl focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all text-foreground"
+                                                                className="w-full px-5 py-4 bg-muted border border-border rounded-xl focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all text-black"
                                                                 placeholder="john@example.com"
                                                             />
                                                         </div>
@@ -511,7 +511,7 @@ ${formData.message}
                                                         className="space-y-4"
                                                     >
                                                         <div>
-                                                            <label className="block text-sm font-medium text-foreground mb-2">
+                                                            <label className="block text-sm font-medium text-black mb-2">
                                                                 <Phone className="w-4 h-4 inline mr-2 text-primary" />
                                                                 Phone Number
                                                             </label>
@@ -520,12 +520,12 @@ ${formData.message}
                                                                 name="phone"
                                                                 value={formData.phone}
                                                                 onChange={handleInputChange}
-                                                                className="w-full px-5 py-4 bg-muted border border-border rounded-xl focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all text-foreground"
+                                                                className="w-full px-5 py-4 bg-muted border border-border rounded-xl focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all text-black"
                                                                 placeholder="(636) 449-9714"
                                                             />
                                                         </div>
                                                         <div>
-                                                            <label className="block text-sm font-medium text-foreground mb-2">
+                                                            <label className="block text-sm font-medium text-black mb-2">
                                                                 <Home className="w-4 h-4 inline mr-2 text-primary" />
                                                                 Project Type
                                                             </label>
@@ -533,7 +533,7 @@ ${formData.message}
                                                                 name="projectType"
                                                                 value={formData.projectType}
                                                                 onChange={handleInputChange}
-                                                                className="w-full px-5 py-4 bg-muted border border-border rounded-xl focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all text-foreground appearance-none"
+                                                                className="w-full px-5 py-4 bg-muted border border-border rounded-xl focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all text-black appearance-none"
                                                             >
                                                                 <option value="">Select project type</option>
                                                                 {projectTypes.map(type => (
@@ -556,7 +556,7 @@ ${formData.message}
                                                         className="space-y-4"
                                                     >
                                                         <div>
-                                                            <label className="block text-sm font-medium text-foreground mb-2">
+                                                            <label className="block text-sm font-medium text-black mb-2">
                                                                 <MessageSquare className="w-4 h-4 inline mr-2 text-primary" />
                                                                 Tell us about your project
                                                             </label>
@@ -566,7 +566,7 @@ ${formData.message}
                                                                 onChange={handleInputChange}
                                                                 required
                                                                 rows={5}
-                                                                className="w-full px-5 py-4 bg-muted border border-border rounded-xl focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all text-foreground resize-none"
+                                                                className="w-full px-5 py-4 bg-muted border border-border rounded-xl focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all text-black resize-none"
                                                                 placeholder="Briefly describe your roofing or solar needs..."
                                                             />
                                                         </div>
@@ -579,7 +579,7 @@ ${formData.message}
                                                     <motion.button
                                                         type="button"
                                                         onClick={() => setStep(step - 1)}
-                                                        className="group px-6 py-3 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2"
+                                                        className="group px-6 py-3 text-sm font-medium text-muted-foreground hover:text-black transition-colors flex items-center gap-2"
                                                         whileHover={{ x: -3 }}
                                                         whileTap={{ scale: 0.98 }}
                                                     >

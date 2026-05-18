@@ -9,7 +9,7 @@ import {
 } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import ownerImg from "@/assets/owner.jpg";
+import ownerImg from "@/assets/owner.png";
 import completeData from "../src/data/completeData.json";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -173,7 +173,7 @@ const CeoPortrait = () => {
           transition={{ delay: 0.3 }}
           className="absolute top-6 left-6"
         >
-          <div className="bg-card/95 backdrop-blur-sm px-5 py-2.5 rounded-full shadow-xl border border-border">
+          <div className="bg-white/95 backdrop-blur-sm px-5 py-2.5 rounded-full shadow-xl border border-border">
             <span className="flex items-center gap-2 text-xs font-bold text-primary">
               <Icons.Flag />
               {ceoData.badges.top}
@@ -187,7 +187,7 @@ const CeoPortrait = () => {
           transition={{ delay: 0.4 }}
           className="absolute bottom-6 right-6"
         >
-          <div className="bg-card/95 backdrop-blur-sm px-5 py-2.5 rounded-full shadow-xl border border-border">
+          <div className="bg-white/95 backdrop-blur-sm px-5 py-2.5 rounded-full shadow-xl border border-border">
             <span className="flex items-center gap-2 text-xs font-bold text-primary">
               <Icons.Award />
               {ceoData.badges.bottom}
@@ -280,14 +280,14 @@ const Leadership = () => {
         <div className="max-w-3xl mx-auto text-center mb-20 leadership-reveal">
           <div className="flex items-center justify-center gap-3 mb-6">
             <div className="w-8 h-[2px] bg-primary" />
-            <span className="text-xs font-black tracking-[0.25em] uppercase text-primary">
+            <span className="text-xs font-bold tracking-[0.25em] uppercase text-primary">
               {section.badge}
             </span>
             <div className="w-8 h-[2px] bg-primary" />
           </div>
 
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground mb-6 leading-[1.1] tracking-tight"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6 leading-[1.1] tracking-tight"
             dangerouslySetInnerHTML={{ __html: section.headline }}
           />
 
@@ -303,9 +303,9 @@ const Leadership = () => {
 
           <div className="space-y-8 leadership-reveal">
             <div>
-              <h3 className="text-3xl md:text-4xl font-black text-foreground mb-1 leading-tight tracking-tight">
+              <h3 className="text-3xl md:text-4xl font-bold text-black mb-1 leading-tight tracking-tight">
                 {ceo.name}
-                <span className="block text-sm font-black text-primary mt-2 tracking-[0.2em] uppercase">
+                <span className="block text-sm font-bold text-primary mt-2 tracking-[0.2em] uppercase">
                   {ceo.title}
                 </span>
               </h3>
@@ -317,7 +317,7 @@ const Leadership = () => {
                 {ceo.quotes.map((quote: string, idx: number) => (
                   <p
                     key={idx}
-                    className="text-foreground text-lg md:text-xl font-medium leading-relaxed pl-6 italic"
+                    className="text-black text-lg md:text-xl font-medium leading-relaxed pl-6 italic"
                   >
                     "{quote}"
                   </p>

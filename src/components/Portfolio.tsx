@@ -17,7 +17,7 @@ import commercialRoof from "@/assets/portfolio-2.jpg";
 import roofRepair from "@/assets/portfolio-3.jpg";
 import solarInstallation from "@/assets/portfolio-4.jpg";
 import flatRoof from "@/assets/portfolio-5.jpg";
-import orrRoofing from "@/assets/orrroofing4.jpg";
+
 
 const projectImages: Record<string, string> = {
   portfolio1: residentialRoof,
@@ -25,7 +25,7 @@ const projectImages: Record<string, string> = {
   portfolio3: roofRepair,
   portfolio4: solarInstallation,
   portfolio5: flatRoof,
-  portfolio6: orrRoofing,
+
 };
 
 const MasonryCard = forwardRef<HTMLDivElement, { project: any; index: number }>(({ project, index }, ref) => {
@@ -45,7 +45,7 @@ const MasonryCard = forwardRef<HTMLDivElement, { project: any; index: number }>(
       onMouseLeave={() => setIsHovered(false)}
       className="group relative mb-8 break-inside-avoid"
     >
-      <div className={`relative overflow-hidden bg-card ${isTall ? "aspect-[3/4]" : "aspect-square"}`}>
+      <div className={`relative overflow-hidden bg-white ${isTall ? "aspect-[3/4]" : "aspect-square"}`}>
         {/* Project Image */}
         <motion.img
           src={projectImages[project.image as keyof typeof projectImages] || projectImages.portfolio1}
@@ -55,7 +55,7 @@ const MasonryCard = forwardRef<HTMLDivElement, { project: any; index: number }>(
           animate={{ scale: isHovered ? 1.08 : 1 }}
         />
 
-        {/* Artistic Brush Stroke Mask Overlay on Hover */}
+        {/* Water Spray Overlay on Hover */}
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: isHovered ? 1 : 0 }}
@@ -69,22 +69,22 @@ const MasonryCard = forwardRef<HTMLDivElement, { project: any; index: number }>(
             <ExternalLink className="w-6 h-6" />
           </motion.div>
 
-          {/* Decorative Brush Stroke SVGs */}
-          <div className="absolute top-0 left-0 w-full opacity-40 rotate-180">
-            <svg viewBox="0 0 500 150" preserveAspectRatio="none" className="w-full h-20 fill-primary">
-              <path d="M0,0 C150,100 350,0 500,100 L500,00 L0,0 Z"></path>
+          {/* Decorative Water Spray SVGs */}
+          <div className="absolute top-0 left-0 w-full opacity-40">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" className="w-full h-24 fill-primary">
+              <path d="M0,150 C150,100 350,200 500,100 L500,0 L0,0 Z"></path>
             </svg>
           </div>
-          <div className="absolute bottom-0 left-0 w-full opacity-40">
-            <svg viewBox="0 0 500 150" preserveAspectRatio="none" className="w-full h-20 fill-primary">
-              <path d="M0,0 C150,100 350,0 500,100 L500,00 L0,0 Z"></path>
+          <div className="absolute bottom-0 left-0 w-full opacity-40 rotate-180">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" className="w-full h-24 fill-primary">
+              <path d="M0,150 C150,100 350,200 500,100 L500,0 L0,0 Z"></path>
             </svg>
           </div>
         </motion.div>
       </div>
       
       {/* Content Area - Properly positioned below the image */}
-      <div className="p-5 md:p-8 border-x border-b border-border bg-card">
+      <div className="p-5 md:p-8 border-x border-b border-border bg-white">
         <div className="flex flex-wrap items-center gap-2 md:gap-3 text-primary font-bold text-[9px] md:text-[10px] uppercase tracking-[0.2em] mb-3">
           <MapPin className="w-3 h-3" />
           {project.location}
@@ -92,7 +92,7 @@ const MasonryCard = forwardRef<HTMLDivElement, { project: any; index: number }>(
           {project.year}
         </div>
         
-        <h3 className="text-xl md:text-2xl font-black text-foreground uppercase italic tracking-tighter leading-none mb-3 md:mb-4 group-hover:text-primary transition-colors">
+        <h3 className="text-xl md:text-2xl font-bold text-black uppercase italic tracking-tighter leading-none mb-3 md:mb-4 group-hover:text-primary transition-colors">
           {project.title}
         </h3>
         
@@ -103,7 +103,7 @@ const MasonryCard = forwardRef<HTMLDivElement, { project: any; index: number }>(
         <div className="flex items-center justify-between pt-4 md:pt-6 border-t border-border">
           <div className="flex items-center gap-2">
             <CheckCircle2 className="w-4 h-4 text-primary" />
-            <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-foreground/70">
+            <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-black/70">
               {project.scope}
             </span>
           </div>
@@ -147,12 +147,12 @@ const Portfolio = () => {
                 <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center text-white shadow-lg shadow-primary/20">
                   <Palette className="w-3 h-3" />
                 </div>
-                <span className="text-primary uppercase tracking-[0.4em] text-[9px] md:text-[10px] font-black">
+                <span className="text-primary uppercase tracking-[0.4em] text-[9px] md:text-[10px] font-bold">
                   {section.badge}
                 </span>
               </motion.div>
               <h2 
-                className="text-4xl sm:text-5xl md:text-7xl font-black text-foreground uppercase tracking-tighter leading-[0.9] md:leading-none"
+                className="text-4xl sm:text-5xl md:text-7xl font-bold text-black uppercase tracking-tighter leading-[0.9] md:leading-none"
                 dangerouslySetInnerHTML={{ __html: section.headline }}
               />
             </div>
@@ -164,10 +164,10 @@ const Portfolio = () => {
               <button
                 key={cat}
                 onClick={() => setActiveTab(cat)}
-                className={`text-[11px] font-black uppercase tracking-[0.3em] transition-all relative py-2 ${
+                className={`text-[11px] font-bold uppercase tracking-[0.3em] transition-all relative py-2 ${
                   activeTab === cat 
                   ? "text-primary" 
-                  : "text-muted-foreground hover:text-foreground"
+                  : "text-muted-foreground hover:text-black"
                 }`}
               >
                 {cat}
@@ -198,7 +198,7 @@ const Portfolio = () => {
         {/* View All Action */}
         <div className="mt-16 md:mt-20 pt-16 md:pt-20 border-t border-border flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="text-center md:text-left">
-            <h4 className="text-xl md:text-2xl font-black uppercase italic tracking-tight text-foreground">
+            <h4 className="text-xl md:text-2xl font-bold uppercase italic tracking-tight text-black">
               Ready to see more?
             </h4>
             <p className="text-muted-foreground text-[10px] md:text-sm uppercase tracking-widest mt-1">
@@ -209,7 +209,7 @@ const Portfolio = () => {
             href="#contact"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
-            className="group w-full md:w-auto inline-flex items-center justify-center gap-4 md:gap-6 bg-foreground text-background px-6 md:px-10 py-4 md:py-5 font-black uppercase tracking-[0.2em] transition-all hover:bg-primary hover:text-white"
+            className="group w-full md:w-auto inline-flex items-center justify-center gap-4 md:gap-6 bg-foreground text-background px-6 md:px-10 py-4 md:py-5 font-bold uppercase tracking-[0.2em] transition-all hover:bg-primary hover:text-white"
           >
             <span>Load More Projects</span>
             <div className="hidden md:block w-8 h-[2px] bg-current transform group-hover:w-12 transition-all" />

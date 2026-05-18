@@ -78,7 +78,7 @@ const GlassCard = ({ children, className = "" }: { children: React.ReactNode; cl
         boxShadow: "0 10px 30px -10px hsl(var(--foreground)/0.05)"
       }}
       transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-      className={`relative bg-card/90 backdrop-blur-sm rounded-2xl border border-primary/50 shadow-xl overflow-hidden ${className}`}
+      className={`relative bg-white/90 backdrop-blur-sm rounded-2xl border border-primary/50 shadow-xl overflow-hidden ${className}`}
     >
       <div className="absolute inset-0 rounded-2xl border border-primary/30 pointer-events-none" />
 
@@ -95,7 +95,7 @@ const GlassCard = ({ children, className = "" }: { children: React.ReactNode; cl
 const StatCounter = ({ value, label, suffix = "", delay = 0 }: { value: string; label: string; suffix?: string; delay?: number }) => {
   const ref = useRef(null);
   const [displayValue, setDisplayValue] = useState(0);
-  const inView = useInView(ref, { once: true, margin: "-50px" });
+  const inView = useInView(ref, { once: true, margin: "0px" });
   const numericValue = parseInt(value);
 
   useEffect(() => {
@@ -230,7 +230,7 @@ const CTASection = () => {
             <div className="w-8 h-[2px] bg-gradient-to-r from-primary to-primary/30" />
           </div>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-6 leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-black mb-6 leading-tight">
             Ready to transform your<br />
             <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/80">
               roofing project?
@@ -238,7 +238,7 @@ const CTASection = () => {
           </h2>
 
           <p className="text-muted-foreground text-lg md:text-xl font-light max-w-2xl mx-auto">
-            Join hundreds of satisfied homeowners who trust Apex Roofing & Solar with their most important investment.
+            Join hundreds of satisfied homeowners who trust L&M Services with their most important investment.
           </p>
         </div>
 
@@ -262,11 +262,11 @@ const CTASection = () => {
                 <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
                   <Icons.Flag />
                   <span className="text-xs font-medium tracking-wider text-primary">
-                    Apex Roofing & Solar • Veteran Owned
+                    L&M Services • Veteran Owned
                   </span>
                 </div>
 
-                <h3 className="text-2xl md:text-3xl lg:text-4xl font-light text-foreground leading-tight">
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-light text-black leading-tight">
                   Your vision,<br />
                   <span className="font-medium text-primary">
                     expertly crafted
@@ -317,7 +317,7 @@ const CTASection = () => {
                   href="/portfolio"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="group relative w-full px-8 py-5 bg-card text-primary text-xs font-medium tracking-[0.2em] uppercase rounded-full border-2 border-primary/20 hover:border-primary/50 transition-all duration-500 block text-center"
+                  className="group relative w-full px-8 py-5 bg-white text-primary text-xs font-medium tracking-[0.2em] uppercase rounded-full border-2 border-primary/20 hover:border-primary/50 transition-all duration-500 block text-center"
                 >
                   <span className="relative z-10 flex items-center justify-center gap-3">
                     View Gallery
@@ -337,7 +337,7 @@ const CTASection = () => {
                     ))}
                   </div>
                   <span className="text-xs text-muted-foreground">
-                    <span className="font-semibold text-foreground">500+</span> satisfied homeowners
+                    <span className="font-semibold text-black">500+</span> satisfied homeowners
                   </span>
                 </div>
               </div>
@@ -373,9 +373,9 @@ const CTASection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: item.delay }}
             >
-              <GlassCard className="p-8 text-center hover:bg-card transition-all duration-500">
+              <GlassCard className="p-8 text-center hover:bg-white transition-all duration-500">
                 <div className="text-3xl text-primary mb-4">{item.icon}</div>
-                <h4 className="text-lg font-medium text-foreground mb-3">{item.title}</h4>
+                <h4 className="text-lg font-medium text-black mb-3">{item.title}</h4>
                 <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
                 <div className="mt-6">
                   <a href="#" className="inline-flex items-center gap-2 text-primary hover:text-primary/80 text-xs font-medium tracking-wider uppercase transition-colors group">

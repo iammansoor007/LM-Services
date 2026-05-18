@@ -250,7 +250,7 @@ const HolographicInput = ({
 
       <div
         className={`
-        relative flex items-center bg-card/95 backdrop-blur-sm rounded-xl border transition-all duration-500
+        relative flex items-center bg-white/95 backdrop-blur-sm rounded-xl border transition-all duration-500
         ${
           isFocused
             ? "border-primary/50 shadow-[0_0_30px_hsl(var(--primary)/0.15)]"
@@ -278,7 +278,7 @@ const HolographicInput = ({
             }}
             onFocus={() => setIsFocused(true)}
             onBlur={() => setIsFocused(false)}
-            className="w-full pl-12 pr-10 py-4 bg-transparent rounded-xl text-foreground text-sm focus:outline-none appearance-none cursor-pointer"
+            className="w-full pl-12 pr-10 py-4 bg-transparent rounded-xl text-black text-sm focus:outline-none appearance-none cursor-pointer"
             {...props}
           >
             <option value="" disabled selected>
@@ -301,7 +301,7 @@ const HolographicInput = ({
             }}
             onFocus={() => setIsFocused(true)}
             onBlur={() => setIsFocused(false)}
-            className="w-full pl-12 pr-4 py-4 bg-transparent rounded-xl text-foreground text-sm placeholder:text-muted-foreground focus:outline-none"
+            className="w-full pl-12 pr-4 py-4 bg-transparent rounded-xl text-black text-sm placeholder:text-muted-foreground focus:outline-none"
             {...props}
           />
         )}
@@ -357,7 +357,7 @@ const QuantumTextarea = ({
 
       <div
         className={`
-        relative flex bg-card/95 backdrop-blur-sm rounded-xl border transition-all duration-500
+        relative flex bg-white/95 backdrop-blur-sm rounded-xl border transition-all duration-500
         ${
           isFocused
             ? "border-primary/50 shadow-[0_0_30px_hsl(var(--primary)/0.15)]"
@@ -385,7 +385,7 @@ const QuantumTextarea = ({
           }}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
-          className="w-full pl-12 pr-4 py-4 bg-transparent rounded-xl text-foreground text-sm placeholder:text-muted-foreground focus:outline-none resize-none"
+          className="w-full pl-12 pr-4 py-4 bg-transparent rounded-xl text-black text-sm placeholder:text-muted-foreground focus:outline-none resize-none"
           {...props}
         />
       </div>
@@ -420,7 +420,7 @@ const CrystalServiceCard = ({
         ${
           isSelected
             ? "bg-gradient-to-br from-primary/5 via-card to-primary/5 shadow-2xl"
-            : "bg-card/80 backdrop-blur-sm hover:bg-card"
+            : "bg-white/80 backdrop-blur-sm hover:bg-white"
         }
       `}
       style={{
@@ -462,7 +462,7 @@ const CrystalServiceCard = ({
       <h4
         className={`
         text-sm sm:text-base font-medium mb-1 sm:mb-2 transition-colors duration-500
-        ${isSelected ? "text-foreground" : "text-foreground/80"}
+        ${isSelected ? "text-black" : "text-black/80"}
       `}
       >
         {title}
@@ -629,7 +629,7 @@ const SuccessModal = ({
               stiffness: 400,
               damping: 30,
             }}
-            className="relative bg-card rounded-2xl sm:rounded-3xl shadow-2xl max-w-lg w-full overflow-hidden"
+            className="relative bg-white rounded-2xl sm:rounded-3xl shadow-2xl max-w-lg w-full overflow-hidden"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-card to-primary/5" />
 
@@ -658,7 +658,7 @@ const SuccessModal = ({
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="text-xl sm:text-2xl font-light text-foreground mb-2 sm:mb-3"
+                className="text-xl sm:text-2xl font-light text-black mb-2 sm:mb-3"
               >
                 {success.title}
               </motion.h3>
@@ -746,7 +746,7 @@ const GetQuote = () => {
       .join(", ");
 
     const emailContent = `
-🏠 Apex Roofing & Solar QUOTE REQUEST
+🏠 L&M Services QUOTE REQUEST
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -773,7 +773,7 @@ ${formData.message}
     try {
       try {
         const response = await fetch(
-          "https://formsubmit.co/ajax/Luis@apexroofingandsolar.com",
+          "https://formsubmit.co/ajax/estimate@l-mservices.com",
           {
             method: "POST",
             headers: {
@@ -781,7 +781,7 @@ ${formData.message}
               Accept: "application/json",
             },
             body: JSON.stringify({
-              _subject: `🏠 Apex Roofing & Solar Quote Request - ${formData.name}`,
+              _subject: `🏠 L&M Services Quote Request - ${formData.name}`,
               name: formData.name,
               email: formData.email,
               phone: formData.phone,
@@ -820,7 +820,7 @@ ${formData.message}
         console.log("FormSubmit failed, using mailto fallback");
       }
 
-      window.location.href = `mailto:${email}?subject=🖌️ Apex Roofing & Solar Quote Request - ${formData.name}&body=${encodeURIComponent(emailContent)}`;
+      window.location.href = `mailto:${email}?subject=🖌️ L&M Services Quote Request - ${formData.name}&body=${encodeURIComponent(emailContent)}`;
       setShowSuccess(true);
       setFormStep(1);
       setSelectedServices([]);
@@ -947,7 +947,7 @@ ${formData.message}
           </div>
 
           <h1
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6 leading-tight"
             dangerouslySetInnerHTML={{ __html: section.headline }}
           />
 
@@ -963,7 +963,7 @@ ${formData.message}
           transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="relative max-w-5xl mx-auto"
         >
-          <div className="relative bg-card/90 backdrop-blur-xl rounded-2xl sm:rounded-3xl border border-primary/10 shadow-2xl overflow-hidden">
+          <div className="relative bg-white/90 backdrop-blur-xl rounded-2xl sm:rounded-3xl border border-primary/10 shadow-2xl overflow-hidden">
             <svg className="absolute inset-0 w-full h-full pointer-events-none">
               <motion.rect
                 x="2"
@@ -1139,7 +1139,7 @@ ${formData.message}
                               <p className="text-[8px] sm:text-[10px] uppercase tracking-wider text-muted-foreground mb-1">
                                 Services
                               </p>
-                              <p className="font-medium text-foreground text-xs sm:text-sm">
+                              <p className="font-medium text-black text-xs sm:text-sm">
                                 {selectedServices.length} of {services.length}
                               </p>
                             </div>
@@ -1147,7 +1147,7 @@ ${formData.message}
                               <p className="text-[8px] sm:text-[10px] uppercase tracking-wider text-muted-foreground mb-1">
                                 Classification
                               </p>
-                              <p className="font-medium text-foreground text-xs sm:text-sm truncate">
+                              <p className="font-medium text-black text-xs sm:text-sm truncate">
                                 {formData.projectType
                                   ? projectTypes.find(
                                       (t: any) =>
@@ -1160,7 +1160,7 @@ ${formData.message}
                               <p className="text-[8px] sm:text-[10px] uppercase tracking-wider text-muted-foreground mb-1">
                                 Timeline
                               </p>
-                              <p className="font-medium text-foreground text-xs sm:text-sm truncate">
+                              <p className="font-medium text-black text-xs sm:text-sm truncate">
                                 {formData.timeline
                                   ? timelines.find(
                                       (t: any) => t.value === formData.timeline,
@@ -1192,7 +1192,7 @@ ${formData.message}
                       ${
                         formStep === 1
                           ? "opacity-0 pointer-events-none"
-                          : "text-muted-foreground hover:text-foreground"
+                          : "text-muted-foreground hover:text-black"
                       }
                     `}
                     whileHover={{ x: -3 }}
@@ -1282,7 +1282,7 @@ ${formData.message}
                     ))}
                   </div>
                   <span className="text-[10px] sm:text-xs text-muted-foreground">
-                    <span className="font-semibold text-foreground">500+</span>{" "}
+                    <span className="font-semibold text-black">500+</span>{" "}
                     consultations
                   </span>
                 </div>

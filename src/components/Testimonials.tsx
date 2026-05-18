@@ -161,7 +161,7 @@ const VideoThumbnailCard = ({ video, onClick }: { video: any; onClick: () => voi
         </div>
       </div>
       <div className="mt-2 md:mt-3">
-        <h4 className="font-semibold text-foreground text-sm md:text-base line-clamp-1">{video.title}</h4>
+        <h4 className="font-semibold text-black text-sm md:text-base line-clamp-1">{video.title}</h4>
         {video.name && (
           <p className="text-xs md:text-sm text-muted-foreground line-clamp-1">{video.name}</p>
         )}
@@ -215,7 +215,7 @@ const TestimonialCard = ({
     >
       <div
         className={`
-          relative bg-card rounded-none p-8 md:p-12
+          relative bg-white rounded-none p-8 md:p-12
           border-2 transition-all duration-500
           min-h-[380px] md:min-h-[420px]
           flex flex-col overflow-hidden
@@ -240,7 +240,7 @@ const TestimonialCard = ({
 
         {/* Quote Text */}
         <div className="flex-1 mb-8">
-          <p className="text-foreground/90 text-lg md:text-xl lg:text-2xl leading-relaxed font-black uppercase italic tracking-tighter">
+          <p className="text-black/90 text-lg md:text-xl lg:text-2xl leading-relaxed font-bold uppercase italic tracking-tighter">
             "{testimonial.text}"
           </p>
         </div>
@@ -248,12 +248,12 @@ const TestimonialCard = ({
         {/* Footer */}
         <div className="flex items-center justify-between gap-6 pt-8 border-t border-border mt-auto">
           <div className="flex items-center gap-4 min-w-0">
-            <div className="w-12 h-12 md:w-16 md:h-16 rounded-none bg-primary flex items-center justify-center text-white font-black text-lg md:text-xl shadow-lg flex-shrink-0">
+            <div className="w-12 h-12 md:w-16 md:h-16 rounded-none bg-primary flex items-center justify-center text-white font-bold text-lg md:text-xl shadow-lg flex-shrink-0">
               {testimonial.avatar}
             </div>
             <div className="min-w-0">
               <div className="flex items-center gap-2">
-                <h4 className="font-black text-foreground text-sm md:text-lg uppercase tracking-widest truncate">
+                <h4 className="font-bold text-black text-sm md:text-lg uppercase tracking-widest truncate">
                   {testimonial.name}
                 </h4>
                 <Icons.Verified />
@@ -352,7 +352,7 @@ const Testimonials = () => {
             <span className="text-[10px] md:text-xs font-medium tracking-[0.2em] uppercase text-primary mb-2 md:mb-3 block">
               {section.badge}
             </span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight"
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6 leading-tight"
               dangerouslySetInnerHTML={{ __html: section.headline }}
             />
             <p className="text-sm md:text-base lg:text-lg text-muted-foreground px-4">
@@ -459,7 +459,7 @@ const Testimonials = () => {
                 ))}
               </div>
               <div className="text-xs md:text-sm text-muted-foreground">
-                <span className="font-semibold text-foreground">{stats.subscribers}</span> 5-star reviews
+                <span className="font-semibold text-black">{stats.subscribers}</span> 5-star reviews
               </div>
             </div>
           </div>

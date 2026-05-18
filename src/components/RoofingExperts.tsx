@@ -1,8 +1,8 @@
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import { useRef, useEffect, useState, useCallback, useMemo, memo } from "react";
-import AboutImg from "@/assets/aboutimageaoex.png";
+import AboutImg from "@/assets/aboutimagelm.png";
 import completeData from "../src/data/completeData.json";
-import PaintDivider from "./ui/PaintDivider";
+import WaterDivider from "./ui/WaterDivider";
 
 const Counter = memo(
   ({
@@ -16,7 +16,7 @@ const Counter = memo(
   }) => {
     const ref = useRef(null);
     const [display, setDisplay] = useState(0);
-    const inView = useInView(ref, { once: true, margin: "-50px" });
+    const inView = useInView(ref, { once: true, margin: "0px" });
     const shouldReduceMotion = useReducedMotion();
     const hasAnimatedRef = useRef(false);
     const animationFrameRef = useRef<number>();
@@ -102,10 +102,10 @@ const StatCard = memo(
       <motion.div
         whileHover={{ y: -4 }}
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
-        className="relative bg-card p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-border shadow-lg hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 w-full transform-gpu"
+        className="relative bg-white p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-border shadow-lg hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 w-full transform-gpu"
       >
         <div className="relative">
-          <span className="text-2xl sm:text-3xl md:text-4xl font-black text-primary">
+          <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary">
             <Counter value={value} suffix={suffix} />
           </span>
           <div className="absolute -bottom-1 sm:-bottom-2 left-0 w-8 sm:w-12 h-0.5 bg-primary rounded-full" />
@@ -174,7 +174,7 @@ export default function AboutSection() {
     <section
       ref={sectionRef}
       className="relative bg-background overflow-hidden py-6 md:py-8 lg:py-12"
-      aria-label="About Apex Roofing & Solar"
+      aria-label="About L&M Services"
     >
       <div className="absolute inset-0">
         <ParticlesBackground />
@@ -218,7 +218,7 @@ export default function AboutSection() {
                   transition={{ delay: 0.8, duration: 0.6 }}
                   className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6"
                 >
-                  <div className="bg-card/95 backdrop-blur-sm px-5 py-2.5 rounded-full shadow-xl border border-border">
+                  <div className="bg-white/95 backdrop-blur-sm px-5 py-2.5 rounded-full shadow-xl border border-border">
                     <span className="flex items-center gap-2 text-sm font-bold text-primary">
                       <span className="text-lg">🇺🇸</span>
                       {image.badge}
@@ -244,7 +244,7 @@ export default function AboutSection() {
                          rounded-full border border-primary/20 w-fit"
             >
               <span className="w-2 h-2 bg-primary rounded-full" />
-              <span className="text-primary uppercase tracking-[0.2em] text-xs font-black">
+              <span className="text-primary uppercase tracking-[0.2em] text-xs font-bold">
                 {badge}
               </span>
             </motion.div>
@@ -253,8 +253,8 @@ export default function AboutSection() {
               <motion.h2
                 variants={variants}
                 custom={3}
-                className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-black
-                           leading-[1.08] tracking-tight text-foreground"
+                className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold
+                           leading-[1.08] tracking-tight text-black"
               >
                 {headline.prefix}{" "}
                 <span className="text-primary">{headline.highlight}</span>{" "}
@@ -361,7 +361,7 @@ export default function AboutSection() {
             rounded-2xl
             inline-flex items-center justify-center gap-2
             bg-white
-            text-foreground
+            text-black
             border-2 border-primary
             font-semibold sm:font-bold
             text-sm sm:text-base
@@ -449,9 +449,9 @@ export default function AboutSection() {
         </svg>
       </div>
 
-      {/* Integrated Paint Divider - Transitions to Services */}
+      {/* Integrated Water Divider - Transitions to Services */}
       <div className="absolute bottom-0 left-0 w-full z-0 pointer-events-none">
-        <PaintDivider color="hsl(var(--primary))" className="translate-y-[1px]" />
+        <WaterDivider color="hsl(var(--primary))" className="translate-y-[1px]" />
       </div>
     </section>
   );

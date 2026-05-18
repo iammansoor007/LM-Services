@@ -1,9 +1,9 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { Home, Sun, Droplets } from "lucide-react";
-import PaintDivider from "./ui/PaintDivider";
+import WaterDivider from "./ui/WaterDivider";
 
-import heroBg from "@/assets/bgimage.png";
+import heroBg from "@/assets/cleaninghero1.png";
 import {
   FiArrowRight,
   FiChevronDown,
@@ -165,8 +165,8 @@ const RoofingInquiryForm = () => {
                   <FiZap className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-foreground">
-                    Free Roofing Estimate
+                  <h3 className="text-xl sm:text-2xl font-bold text-black">
+                    L&M Services Estimate
                   </h3>
                   <p className="text-muted-foreground text-sm mt-0.5">
                     Get your quote in 3 easy steps
@@ -272,7 +272,7 @@ const RoofingInquiryForm = () => {
                         </span>
                       </div>
                       <div>
-                        <label className="block text-sm font-semibold text-foreground mb-2">
+                        <label className="block text-sm font-semibold text-black mb-2">
                           First name
                         </label>
                         <div className="relative group">
@@ -282,14 +282,14 @@ const RoofingInquiryForm = () => {
                             name="firstName"
                             value={formData.firstName}
                             onChange={handleChange}
-                            className="w-full border-2 border-border rounded-xl py-3 pl-11 pr-4 text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary focus:bg-white transition-all"
+                            className="w-full border-2 border-border rounded-xl py-3 pl-11 pr-4 text-black placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary focus:bg-white transition-all"
                             placeholder="John"
                             required
                           />
                         </div>
                       </div>
                       <div>
-                        <label className="block text-sm font-semibold text-foreground mb-2">
+                        <label className="block text-sm font-semibold text-black mb-2">
                           Last name
                         </label>
                         <div className="relative group">
@@ -299,14 +299,14 @@ const RoofingInquiryForm = () => {
                             name="lastName"
                             value={formData.lastName}
                             onChange={handleChange}
-                            className="w-full border-2 border-border rounded-xl py-3 pl-11 pr-4 text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary focus:bg-white transition-all"
+                            className="w-full border-2 border-border rounded-xl py-3 pl-11 pr-4 text-black placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary focus:bg-white transition-all"
                             placeholder="Doe"
                             required
                           />
                         </div>
                       </div>
                       <div>
-                        <label className="block text-sm font-semibold text-foreground mb-2">
+                        <label className="block text-sm font-semibold text-black mb-2">
                           Property address
                         </label>
                         <div className="relative group">
@@ -316,7 +316,7 @@ const RoofingInquiryForm = () => {
                             name="address"
                             value={formData.address}
                             onChange={handleChange}
-                            className="w-full border-2 border-border rounded-xl py-3 pl-11 pr-4 text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary focus:bg-white transition-all"
+                            className="w-full border-2 border-border rounded-xl py-3 pl-11 pr-4 text-black placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary focus:bg-white transition-all"
                             placeholder="123 Main St, Canton, MI"
                             required
                           />
@@ -354,7 +354,7 @@ const RoofingInquiryForm = () => {
                         </span>
                       </div>
                       <div>
-                        <label className="block text-sm font-semibold text-foreground mb-2">
+                        <label className="block text-sm font-semibold text-black mb-2">
                           Service needed
                         </label>
                         <div className="relative">
@@ -362,7 +362,7 @@ const RoofingInquiryForm = () => {
                             name="serviceType"
                             value={formData.serviceType}
                             onChange={handleChange}
-                            className="w-full border-2 border-border rounded-xl py-3.5 pl-12 pr-10 text-foreground focus:outline-none focus:border-primary focus:bg-white transition-all appearance-none cursor-pointer bg-white"
+                            className="w-full border-2 border-border rounded-xl py-3.5 pl-12 pr-10 text-black focus:outline-none focus:border-primary focus:bg-white transition-all appearance-none cursor-pointer bg-white"
                             style={{ height: "52px" }}
                           >
                             {serviceOptions.map((opt) => (
@@ -375,7 +375,7 @@ const RoofingInquiryForm = () => {
                         </div>
                       </div>
                       <div>
-                        <label className="block text-sm font-semibold text-foreground mb-2">
+                        <label className="block text-sm font-semibold text-black mb-2">
                           Urgency
                         </label>
                         <div className="relative">
@@ -383,7 +383,7 @@ const RoofingInquiryForm = () => {
                             name="urgency"
                             value={formData.urgency}
                             onChange={handleChange}
-                            className="w-full border-2 border-border rounded-xl py-3.5 pl-4 pr-10 text-foreground focus:outline-none focus:border-primary focus:bg-white transition-all appearance-none cursor-pointer bg-white"
+                            className="w-full border-2 border-border rounded-xl py-3.5 pl-4 pr-10 text-black focus:outline-none focus:border-primary focus:bg-white transition-all appearance-none cursor-pointer bg-white"
                           >
                             {urgencyOptions.map((opt) => (
                               <option key={opt.value} value={opt.value}>
@@ -394,7 +394,7 @@ const RoofingInquiryForm = () => {
                         </div>
                       </div>
                       <div>
-                        <label className="block text-sm font-semibold text-foreground mb-2">
+                        <label className="block text-sm font-semibold text-black mb-2">
                           Additional details{" "}
                           <span className="text-muted-foreground/60 font-normal">
                             (optional)
@@ -405,7 +405,7 @@ const RoofingInquiryForm = () => {
                           value={formData.serviceDetails}
                           onChange={handleChange}
                           rows={3}
-                          className="w-full border-2 border-border rounded-xl py-3 px-4 text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary focus:bg-white transition-all resize-none"
+                          className="w-full border-2 border-border rounded-xl py-3 px-4 text-black placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary focus:bg-white transition-all resize-none"
                           placeholder="Tell us about your project, colors, etc."
                           style={{ minHeight: "80px" }}
                         />
@@ -446,7 +446,7 @@ const RoofingInquiryForm = () => {
                         </span>
                       </div>
                       <div>
-                        <label className="block text-sm font-semibold text-foreground/80 mb-2">
+                        <label className="block text-sm font-semibold text-black/80 mb-2">
                           Email address
                         </label>
                         <div className="relative group">
@@ -456,14 +456,14 @@ const RoofingInquiryForm = () => {
                             name="email"
                             value={formData.email}
                             onChange={handleChange}
-                            className="w-full border-2 border-border rounded-xl py-3 pl-11 pr-4 text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary focus:bg-white transition-all"
+                            className="w-full border-2 border-border rounded-xl py-3 pl-11 pr-4 text-black placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary focus:bg-white transition-all"
                             placeholder="hello@example.com"
                             required
                           />
                         </div>
                       </div>
                       <div>
-                        <label className="block text-sm font-semibold text-foreground/80 mb-2">
+                        <label className="block text-sm font-semibold text-black/80 mb-2">
                           Phone number
                         </label>
                         <div className="relative group">
@@ -473,7 +473,7 @@ const RoofingInquiryForm = () => {
                             name="phone"
                             value={formData.phone}
                             onChange={handleChange}
-                            className="w-full border-2 border-border rounded-xl py-3 pl-11 pr-4 text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary focus:bg-white transition-all"
+                            className="w-full border-2 border-border rounded-xl py-3 pl-11 pr-4 text-black placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary focus:bg-white transition-all"
                             placeholder="+1 (386) 246-7999"
                             required
                           />
@@ -512,11 +512,11 @@ const RoofingInquiryForm = () => {
               <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
                 <FiCheckCircle className="w-10 h-10 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-2">
+              <h3 className="text-2xl font-bold text-black mb-2">
                 Estimate Request Sent!
               </h3>
               <p className="text-muted-foreground text-sm max-w-xs mx-auto">
-                Thanks for contacting Apex Roofing & Solar. We'll reach out within 24 hours with your free estimate.
+                Thanks for contacting L&M Services. We'll reach out within 24 hours with your free estimate.
               </p>
             </motion.div>
           )}
@@ -549,12 +549,12 @@ const Hero = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen overflow-hidden bg-secondary isolate"
+      className="relative min-h-screen overflow-hidden bg-[#0a1128] isolate"
     >
       <div className="absolute inset-0 -z-10">
         <motion.img
           src={heroBg}
-          alt="Apex Roofing & Solar - Professional roofing services"
+          alt="L&M Services - Professional Exterior Cleaning & Maintenance"
           loading="eager"
           {...({ fetchpriority: "high" } as any)}
           initial={{ scale: 1.1 }}
@@ -562,13 +562,10 @@ const Hero = () => {
           transition={{ duration: 10, ease: "easeOut" }}
           className="w-full h-full object-cover absolute inset-0 opacity-90 will-change-transform"
         />
-        {/* Subtly reduced Overlays */}
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="absolute inset-0 bg-primary/25 mix-blend-multiply" />
-
-        {/* Softened Directional Gradients */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/10" />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/15 via-transparent to-transparent" />
+        {/* Split Cinematic Overlay System */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0a1128] via-[#0a1128]/60 to-transparent z-0" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0a1128] via-transparent to-transparent opacity-80 z-0" />
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-[radial-gradient(circle_at_top_right,hsla(var(--accent),0.1),transparent_70%)] z-0" />
       </div>
 
       <div className="relative z-10 min-h-screen flex items-center pt-32 pb-16 lg:py-24">
@@ -588,7 +585,7 @@ const Hero = () => {
               </motion.div>
 
               <motion.h1
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white lg:leading-[1.1] tracking-tight uppercase"
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white lg:leading-[1.1] tracking-tight uppercase"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
@@ -660,11 +657,11 @@ const Hero = () => {
                     <div key={stat.label} className="flex items-center gap-4 group">
                       <div className="w-12 h-12 rounded-2xl bg-primary/5 flex items-center justify-center transition-all duration-300 group-hover:bg-primary/10 group-hover:scale-110">
                         {StatIcon && (
-                          <StatIcon className="w-6 h-6 text-primary" />
+                          <StatIcon className="w-6 h-6 text-accent" />
                         )}
                       </div>
                       <div>
-                        <div className="text-3xl font-black text-white leading-none mb-1">
+                        <div className="text-3xl font-bold text-white leading-none mb-1">
                           {stat.value}
                         </div>
                         <div className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/40">
@@ -684,9 +681,9 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Integrated Paint Divider - Transitions to the next section */}
-      <div className="absolute bottom-0 left-0 w-full z-1 pointer-events-none opacity-20">
-        <PaintDivider color="hsl(var(--primary))" className="translate-y-[1px]" />
+      {/* Integrated Water/Spray Divider - Transitions to the next section */}
+      <div className="absolute bottom-0 left-0 w-full z-1 pointer-events-none">
+        <WaterDivider color="hsl(var(--background))" className="translate-y-[1px]" />
       </div>
     </section >
   );

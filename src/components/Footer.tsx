@@ -136,14 +136,13 @@ const Icons = {
       />
     </svg>
   ),
-  Paint: () => (
+  Cleaning: () => (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
       <path
-        d="M3 10L12 3L21 10L18 13L12 8L6 13L3 10Z"
+        d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"
         stroke="currentColor"
         strokeWidth="1.5"
       />
-      <path d="M6 13V19H18V13" stroke="currentColor" strokeWidth="1.5" />
     </svg>
   ),
   Inspection: () => (
@@ -288,7 +287,7 @@ const iconMap = {
   Residential: Icons.Residential,
   Commercial: Icons.Commercial,
   Emergency: Icons.Emergency,
-  Paint: Icons.Paint,
+  Cleaning: Icons.Cleaning,
   Warranty: Icons.Warranty,
   Financing: Icons.Financing,
   CreditCard: Icons.CreditCard,
@@ -366,14 +365,14 @@ const NewsletterForm = () => {
             onChange={(e) => setEmail(e.target.value)}
             onFocus={() => setIsFocused(true)}
             onBlur={() => setIsFocused(false)}
-            className="w-full bg-transparent px-6 py-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none"
+            className="w-full bg-transparent px-6 py-4 text-sm text-black placeholder:text-white/70 focus:outline-none"
             required
           />
           <motion.button
             type="submit"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="absolute right-2 px-4 py-2 bg-primary text-primary-foreground text-xs font-medium rounded-full hover:bg-primary/90 transition-all duration-300 flex items-center gap-2"
+            className="absolute right-2 px-4 py-2 bg-primary text-accent-foreground text-xs font-medium rounded-full hover:bg-primary/90 transition-all duration-300 flex items-center gap-2"
           >
             Subscribe
             <Icons.ArrowRight />
@@ -389,7 +388,7 @@ const NewsletterForm = () => {
             exit={{ opacity: 0, y: -10 }}
             className="absolute -bottom-8 left-0 right-0 text-center"
           >
-            <span className="text-xs text-primary">
+            <span className="text-xs text-accent">
               ✓ Thank you for subscribing
             </span>
           </motion.div>
@@ -404,22 +403,22 @@ const ServiceLinks = () => {
 
   return (
     <div className="space-y-4">
-      <h4 className="text-xs font-mono tracking-[0.2em] uppercase text-white/40 flex items-center gap-2">
+      <h4 className="text-xs font-mono tracking-[0.2em] uppercase text-white/90 flex items-center gap-2">
         <Icons.Sparkle />
         {services.title}
       </h4>
       <div className="grid grid-cols-1 gap-2">
         {services.main.map((service: any) => {
           const ServiceIcon =
-            iconMap[service.icon as keyof typeof iconMap] || Icons.Paint;
+            iconMap[service.icon as keyof typeof iconMap] || Icons.Cleaning;
           return (
             <motion.a
               key={service.label}
               href={service.href}
               whileHover={{ x: 5 }}
-              className="inline-flex items-center gap-3 text-sm text-white/60 hover:text-primary transition-all duration-300 group py-1"
+              className="inline-flex items-center gap-3 text-sm text-white/90 hover:text-accent transition-all duration-300 group py-1"
             >
-              <span className="text-white/40 group-hover:text-primary transition-colors">
+              <span className="text-white/90 group-hover:text-accent transition-colors">
                 <ServiceIcon />
               </span>
               <span>{service.label}</span>
@@ -436,7 +435,7 @@ const MaterialsSection = () => {
 
   return (
     <div className="space-y-3 mt-4">
-      <h5 className="text-[10px] font-mono tracking-[0.2em] uppercase text-primary/60">
+      <h5 className="text-[10px] font-mono tracking-[0.2em] uppercase text-accent/60">
         {services.materials.title}
       </h5>
       <div className="space-y-2">
@@ -445,9 +444,9 @@ const MaterialsSection = () => {
             key={material.label}
             href={material.href}
             whileHover={{ x: 5 }}
-            className="inline-flex items-center gap-2 text-xs text-white/40 hover:text-primary transition-colors"
+            className="inline-flex items-center gap-2 text-xs text-white/90 hover:text-accent transition-colors"
           >
-            <span className="text-[8px] text-primary/40">●</span>
+            <span className="text-[8px] text-accent/40">●</span>
             {material.label}
           </motion.a>
         ))}
@@ -462,37 +461,37 @@ const ContactInfo = () => {
   return (
     <div className="space-y-6">
       <div className="space-y-4">
-        <h4 className="text-xs font-mono tracking-[0.2em] uppercase text-white/40 flex items-center gap-2">
+        <h4 className="text-xs font-mono tracking-[0.2em] uppercase text-white/90 flex items-center gap-2">
           <Icons.Sparkle />
           {contact.title}
         </h4>
         <div className="space-y-4">
           <a
             href={`mailto:${contact.email}`}
-            className="flex items-center gap-3 text-sm text-white/60 hover:text-primary transition-colors group"
+            className="flex items-center gap-3 text-sm text-white/90 hover:text-accent transition-colors group"
           >
-            <span className="text-white/40 group-hover:text-primary">
+            <span className="text-white/90 group-hover:text-accent">
               <Icons.Mail />
             </span>
             {contact.email}
           </a>
           <a
             href={`tel:${contact.phone}`}
-            className="flex items-center gap-3 text-sm text-white/60 hover:text-primary transition-colors group"
+            className="flex items-center gap-3 text-sm text-white/90 hover:text-accent transition-colors group"
           >
-            <span className="text-white/40 group-hover:text-primary">
+            <span className="text-white/90 group-hover:text-accent">
               <Icons.Phone />
             </span>
             {contact.phone}
           </a>
-          <div className="flex items-center gap-3 text-sm text-white/60">
-            <span className="text-white/40">
+          <div className="flex items-center gap-3 text-sm text-white/90">
+            <span className="text-white/90">
               <Icons.Location />
             </span>
             <span>{contact.address}</span>
           </div>
-          <div className="flex items-center gap-3 text-sm text-white/60">
-            <span className="text-white/40">
+          <div className="flex items-center gap-3 text-sm text-white/90">
+            <span className="text-white/90">
               <Icons.Infinity />
             </span>
             <span>{contact.emergency}</span>
@@ -501,10 +500,10 @@ const ContactInfo = () => {
       </div>
 
       <div className="space-y-3">
-        <h5 className="text-[10px] font-mono tracking-[0.2em] uppercase text-primary/60">
+        <h5 className="text-[10px] font-mono tracking-[0.2em] uppercase text-accent/60">
           Service Areas
         </h5>
-        <p className="text-xs text-muted-foreground leading-relaxed">
+        <p className="text-xs text-white/70 leading-relaxed">
           {contact.areas}
         </p>
       </div>
@@ -530,14 +529,14 @@ const CertificationsGrid = () => {
             className="relative p-3 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 hover:border-primary/30 transition-all duration-300 group"
           >
             <div className="flex items-center gap-2">
-              <span className="text-muted-foreground/60 group-hover:text-primary transition-colors">
+              <span className="text-white/70 group-hover:text-accent transition-colors">
                 <CertIcon />
               </span>
               <div>
-                <span className="text-xs font-mono text-primary/80">
+                <span className="text-xs font-mono text-accent/80">
                   {cert.cert}
                 </span>
-                <p className="text-[10px] text-white/40">
+                <p className="text-[10px] text-white/90">
                   {cert.number}
                 </p>
               </div>
@@ -563,7 +562,7 @@ const SocialLinks = () => {
             href={socialItem.href}
             whileHover={{ y: -3, scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            className="relative w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/40 hover:text-primary hover:bg-primary/5 hover:border-primary/20 transition-all duration-300 group"
+            className="relative w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/90 hover:text-accent hover:bg-primary/5 hover:border-primary/20 transition-all duration-300 group"
             aria-label={socialItem.platform}
           >
             <SocialIcon />
@@ -592,22 +591,22 @@ const LegacyMarquee = () => {
       >
         {[...Array(8)].map((_, i) => (
           <div key={i} className="flex items-center gap-8 mx-8 group">
-            <span className="text-xs font-mono text-primary/40 group-hover:text-primary transition-colors duration-300">
+            <span className="text-xs font-mono text-accent/40 group-hover:text-accent transition-colors duration-300">
               <Icons.Sparkle />
             </span>
-            <span className="text-sm uppercase tracking-[0.3em] text-white/20 group-hover:text-white/60 transition-colors duration-300">
+            <span className="text-sm uppercase tracking-[0.3em] text-white/60 group-hover:text-white/90 transition-colors duration-300">
               {marquee.texts[0]}
             </span>
-            <span className="text-xs font-mono text-primary/40 group-hover:text-primary transition-colors duration-300">
+            <span className="text-xs font-mono text-accent/40 group-hover:text-accent transition-colors duration-300">
               <Icons.Sparkle />
             </span>
-            <span className="text-sm uppercase tracking-[0.3em] text-white/20 group-hover:text-white/60 transition-colors duration-300">
+            <span className="text-sm uppercase tracking-[0.3em] text-white/60 group-hover:text-white/90 transition-colors duration-300">
               {marquee.texts[1]}
             </span>
-            <span className="text-xs font-mono text-primary/40 group-hover:text-primary transition-colors duration-300">
+            <span className="text-xs font-mono text-accent/40 group-hover:text-accent transition-colors duration-300">
               <Icons.Sparkle />
             </span>
-            <span className="text-sm uppercase tracking-[0.3em] text-white/20 group-hover:text-white/60 transition-colors duration-300">
+            <span className="text-sm uppercase tracking-[0.3em] text-white/60 group-hover:text-white/90 transition-colors duration-300">
               {marquee.texts[2]}
             </span>
           </div>
@@ -655,7 +654,24 @@ const Footer = () => {
   if (!isClient) return null;
 
   return (
-    <footer ref={sectionRef} className="relative bg-secondary overflow-hidden">
+    <footer 
+      ref={sectionRef} 
+      className="relative pt-24 pb-12 overflow-hidden text-white"
+      style={{ background: "linear-gradient(135deg, #050a1a 0%, #0a1128 50%, #050a1a 100%)" }}
+    >
+      {/* Services CTA Style Overlays */}
+      <div className="absolute inset-0 pointer-events-none opacity-[0.05]" style={{
+        backgroundImage: "repeating-linear-gradient(60deg, #ffffff 0px, #ffffff 1px, transparent 1px, transparent 60px)",
+      }} />
+      <div className="absolute -top-24 -right-24 w-[600px] h-[600px] pointer-events-none"
+        style={{ background: "radial-gradient(ellipse, hsla(221, 84%, 55%, 0.15) 0%, transparent 65%)" }} />
+      <div className="absolute bottom-0 left-0 w-full h-px bg-white/10" />
+      
+      {/* Cinematic Overlays */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-primary/5 to-transparent" />
+      </div>
       {/* Cinematic Background Architecture */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Technical Grid Pattern - More Prominent */}
@@ -670,8 +686,6 @@ const Footer = () => {
           }}
         />
 
-        {/* Radial Center Glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 blur-[160px] rounded-full" />
       </div>
 
       {/* Floating Cinematic Blobs */}
@@ -742,108 +756,72 @@ const Footer = () => {
       <QuantumParticles />
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-30">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-24 pb-16 border-b border-white/10">
-          <div className="lg:col-span-3 space-y-6 footer-reveal">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="space-y-4"
-            >
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center shadow-2xl shadow-primary/30">
-                  <span className="text-primary-foreground font-bold text-sm text-center leading-tight">
-                    AR
-                  </span>
-                </div>
-                <div>
-                  <span className="text-white font-light text-lg block">
-                    {company.name}
-                  </span>
-                  <span className="text-[10px] text-primary/80 font-mono tracking-wider">
-                    {company.tagline}
-                  </span>
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 pb-20 border-b border-white/5">
+          {/* Column 1: Brand & Bio */}
+          <div className="space-y-8 footer-reveal">
+            <div className="flex items-center gap-4">
+              <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shadow-2xl rotate-3 group-hover:rotate-0 transition-transform duration-500">
+                <span className="text-white font-bold text-xl">LM</span>
               </div>
-
-              <p className="text-white/60 text-xs leading-relaxed">
-                {company.description}
-              </p>
-
-              <SocialLinks />
-            </motion.div>
-
-            <div className="space-y-3">
-              <h4 className="text-[10px] font-mono tracking-[0.2em] uppercase text-white/40">
-                Subscribe to insights
-              </h4>
-              <NewsletterForm />
+              <div className="space-y-1">
+                <h3 className="text-white font-bold text-xl uppercase tracking-tighter leading-none">
+                  {company.name}
+                </h3>
+                <p className="text-accent text-[10px] font-bold uppercase tracking-[0.2em]">
+                  {company.tagline}
+                </p>
+              </div>
             </div>
 
-            <div className="flex flex-wrap gap-3 pt-2">
-              {quickLinks.map((link: any) => {
-                const LinkIcon =
-                  iconMap[link.icon as keyof typeof iconMap] || Icons.Warranty;
-                return (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    className="text-[10px] text-white/40 hover:text-primary transition-colors flex items-center gap-1"
-                  >
-                    <LinkIcon /> {link.label}
-                  </a>
-                );
-              })}
+            <p className="text-white/90 text-sm leading-relaxed max-w-sm">
+              {company.description}
+            </p>
+
+            <div className="pt-4">
+              <SocialLinks />
             </div>
           </div>
 
-          <div className="lg:col-span-5 footer-reveal">
+          {/* Column 2: Services */}
+          <div className="footer-reveal">
             <ServiceLinks />
+          </div>
+
+          {/* Column 3: Quick Links & Materials */}
+          <div className="footer-reveal space-y-10">
+            <div className="space-y-6">
+              <h4 className="text-xs font-bold tracking-[0.2em] uppercase text-white/60 flex items-center gap-2">
+                Company
+              </h4>
+              <div className="grid grid-cols-1 gap-3">
+                {quickLinks.map((link: any) => (
+                  <motion.a
+                    key={link.label}
+                    href={link.href}
+                    whileHover={{ x: 5 }}
+                    className="text-sm text-white/80 hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </motion.a>
+                ))}
+              </div>
+            </div>
             <MaterialsSection />
           </div>
 
-          <div className="lg:col-span-4 footer-reveal">
+          {/* Column 4: Contact & Trust */}
+          <div className="footer-reveal space-y-8">
             <ContactInfo />
-
-            {hours && (
-              <div className="mt-6 pt-4 border-t border-white/10">
-                <h4 className="text-xs font-mono tracking-[0.2em] uppercase text-white/40 flex items-center gap-2 mb-3">
-                  <Icons.Sparkle />
-                  Office Hours
-                </h4>
-                <div className="space-y-1 text-xs text-white/60">
-                  <div className="flex justify-between">
-                    <span>Monday - Friday:</span>
-                    <span>{hours.monday}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Saturday:</span>
-                    <span>{hours.saturday}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Sunday:</span>
-                    <span>{hours.sunday}</span>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            <div className="mt-6 pt-4 border-t border-white/10">
-              <h4 className="text-xs font-mono tracking-[0.2em] uppercase text-white/40 flex items-center gap-2 mb-3">
-                <Icons.Sparkle />
-                Certifications & Accreditations
-              </h4>
-              <CertificationsGrid />
-            </div>
+            <CertificationsGrid />
           </div>
         </div>
 
-        <LegacyMarquee />
+        <div className="pt-8 mb-8" />
 
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 py-6 text-[10px] text-white/40">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 py-6 text-[10px] text-white/90">
           <div className="flex items-center gap-4">
             <span>{bottom.copyright}</span>
-            <span className="w-1 h-1 rounded-full bg-white/10" />
+            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
             <span>{bottom.rights}</span>
           </div>
           <div className="flex items-center gap-6">
@@ -851,7 +829,7 @@ const Footer = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="hover:text-primary transition-colors"
+                className="hover:text-accent transition-colors"
               >
                 {link.label}
               </a>
@@ -861,7 +839,7 @@ const Footer = () => {
             href="https://www.dynamicdesignsagency.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white/30 hover:text-primary transition-colors duration-300"
+            className="text-white/70 hover:text-accent transition-colors duration-300"
           >
             <span className="font-mono">{bottom.tagline}</span>
           </a>

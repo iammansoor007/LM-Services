@@ -10,7 +10,7 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import completeData from "../src/data/completeData.json";
-import vectorimage2 from '../assets/faqvector.png'
+import vectorimage2 from '../assets/ctavector.png'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -288,7 +288,7 @@ const FeatureCard = ({ feature, index }: { feature: any; index: number }) => {
       }}
       className="relative group h-full cursor-pointer"
     >
-      <div className="relative h-full bg-card overflow-hidden rounded-2xl border border-border">
+      <div className="relative h-full bg-white overflow-hidden rounded-2xl border border-border">
         <motion.div
           className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
           style={{
@@ -454,7 +454,7 @@ const FeatureCard = ({ feature, index }: { feature: any; index: number }) => {
           </motion.p>
 
           <motion.div
-            className="absolute bottom-4 right-4 text-7xl font-black text-muted-foreground/20 select-none"
+            className="absolute bottom-4 right-4 text-7xl font-bold text-muted-foreground/20 select-none"
             animate={{
               scale: isHovered ? 1.1 : 1,
               color: isHovered
@@ -521,11 +521,12 @@ const StatCounter = ({
   const ref = useRef(null);
   const [displayValue, setDisplayValue] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-  const inView = useInView(ref, { once: true, margin: "-50px" });
-  const numericValue = parseInt(value);
+  const inView = useInView(ref, { once: true, margin: "0px" });
+  const isNumeric = !isNaN(parseInt(value));
+  const numericValue = isNumeric ? parseInt(value) : 0;
 
   useEffect(() => {
-    if (!inView) return;
+    if (!inView || !isNumeric) return;
 
     let startTime: number;
     const duration = 1200;
@@ -543,7 +544,7 @@ const StatCounter = ({
     };
 
     requestAnimationFrame(animate);
-  }, [inView, numericValue]);
+  }, [inView, numericValue, isNumeric]);
 
   return (
     <motion.div
@@ -557,13 +558,13 @@ const StatCounter = ({
     >
       <div className="relative inline-block">
         <motion.div
-          className="text-4xl md:text-5xl font-black text-primary relative z-10"
+          className="text-4xl md:text-5xl font-bold text-primary relative z-10"
           animate={{
             scale: isHovered ? 1.1 : 1,
             y: isHovered ? -2 : 0,
           }}
         >
-          <span>{displayValue}</span>
+          <span>{isNumeric ? displayValue : value}</span>
           {suffix}
         </motion.div>
 
@@ -611,26 +612,38 @@ const CTASection = memo(({ cta }: CTASectionProps) => {
         {/* Cinematic Background Layer */}
         <div
           className="absolute inset-0"
-          style={{
-            background: "linear-gradient(145deg, #450505 0%, #7c0a0a 50%, #450505 100%)"
-          }}
+          style={{ background: "linear-gradient(135deg, hsl(217 78% 8%) 0%, hsl(221 84% 15%) 50%, hsl(217 78% 5%) 100%)" }}
         />
 
-        {/* Technical Grid Pattern */}
-        <div 
-          className="absolute inset-0 opacity-[0.15]" 
-          style={{ 
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-            backgroundSize: '40px 40px'
-          }}
-        />
+        {/* Grid lines — white so they're visible on red bg */}
+        <div className="absolute inset-0 pointer-events-none" style={{
+          backgroundImage: `linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+                            linear-gradient(to right, rgba(255,255,255,0.08) 1px, transparent 1px)`,
+          backgroundSize: "48px 48px",
+        }} />
 
-        {/* Ambient Glow Effects */}
-        <div className="hidden md:block absolute right-[10%] top-[10%] w-[400px] h-[400px] bg-white/5 blur-[140px] rounded-full pointer-events-none" />
-        <div className="hidden md:block absolute left-[5%] bottom-[20%] w-[250px] h-[250px] bg-black/40 blur-[100px] rounded-full pointer-events-none" />
+        {/* Diagonal accent lines */}
+        <div className="absolute inset-0 pointer-events-none opacity-[0.07]" style={{
+          backgroundImage: "repeating-linear-gradient(60deg, #ffffff 0px, #ffffff 1px, transparent 1px, transparent 60px)",
+        }} />
 
-        {/* Vignette Overlay */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle,transparent_60%,rgba(0,0,0,0.3))]" />
+        {/* Top-right radial glow — warm highlight */}
+        <div className="absolute -top-24 -right-24 w-[480px] h-[480px] pointer-events-none"
+          style={{ background: "radial-gradient(ellipse, hsla(var(--secondary), 0.3) 0%, transparent 65%)" }} />
+
+        {/* Bottom-left dark shadow glow */}
+        <div className="absolute -bottom-24 -left-24 w-[400px] h-[400px] pointer-events-none"
+          style={{ background: "radial-gradient(ellipse, rgba(0,0,0,0.35) 0%, transparent 70%)" }} />
+
+        {/* Centre horizontal glow strip */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+                        w-[700px] h-[180px] pointer-events-none"
+          style={{ background: "radial-gradient(ellipse, hsla(var(--accent), 0.1) 0%, transparent 65%)" }} />
+
+        {/* Inset border */}
+        <div className="absolute inset-0 rounded-3xl pointer-events-none" style={{
+          boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.12), 0 32px 80px -16px hsla(var(--primary), 0.6)",
+        }} />
 
         {/* Main Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-12 md:py-16 lg:py-20">
@@ -800,6 +813,7 @@ const CTASection = memo(({ cta }: CTASectionProps) => {
   );
 });
 
+
 CTASection.displayName = "CTASection";
 
 const WhyChooseUs = () => {
@@ -843,7 +857,7 @@ const WhyChooseUs = () => {
     <section
       ref={sectionRef}
       className="relative bg-background py-20 md:py-24 lg:py-32 overflow-hidden"
-      aria-label="Why Choose Apex Roofing & Solar"
+      aria-label="Why Choose L&M Services"
     >
       <CinematicBackground />
 
@@ -864,7 +878,7 @@ const WhyChooseUs = () => {
             </div>
 
             <h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6 leading-tight"
               dangerouslySetInnerHTML={{ __html: section.headline }}
             />
 

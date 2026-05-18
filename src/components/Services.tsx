@@ -6,7 +6,7 @@ import {
   Layout, Building, CheckCircle, Phone, Zap,
 } from "lucide-react";
 import completeData from "../src/data/completeData.json";
-import PaintDivider from "./ui/PaintDivider";
+import WaterDivider from "./ui/WaterDivider";
 import roofInspection from "@/assets/roofinspection.jpg";
 import solarServices from "@/assets/solar.jpg";
 import roofMaintenance from "@/assets/roofmaintaince.jpg";
@@ -78,8 +78,9 @@ const ServiceCard = memo(({
   return (
     <motion.a
       href="#contact"
-      initial={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
       onHoverStart={() => setHovered(true)}
       onHoverEnd={() => setHovered(false)}
       className={`group relative bg-white rounded-2xl overflow-hidden border border-border
@@ -96,8 +97,8 @@ const ServiceCard = memo(({
       <div className="relative h-48 overflow-hidden shrink-0 bg-gradient-to-br from-primary/5 to-primary/10">
         {img ? (
           <>
-            <img src={img} alt={service.title} loading="eager"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 will-change-transform transform-gpu" />
+            <img src={img} alt={service.title} loading="lazy" decoding="async"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
           </>
         ) : (
@@ -106,12 +107,12 @@ const ServiceCard = memo(({
           </div>
         )}
         <div className="absolute top-4 left-4">
-          <span className="bg-primary text-white text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-full shadow-lg">
+          <span className="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full shadow-lg">
             {service.tag}
           </span>
         </div>
         <div className="absolute bottom-4 right-4">
-          <span className="text-white/40 font-black text-4xl leading-none select-none">
+          <span className="text-white/40 font-bold text-4xl leading-none select-none">
             {service.number}
           </span>
         </div>
@@ -124,7 +125,7 @@ const ServiceCard = memo(({
                           group-hover:bg-primary transition-colors duration-300 shrink-0">
             <Icon className="w-5 h-5 text-primary group-hover:text-white transition-colors duration-300" />
           </div>
-          <h3 className="text-lg font-black text-foreground group-hover:text-primary
+          <h3 className="text-lg font-bold text-black group-hover:text-primary
                          transition-colors duration-300 leading-tight">
             {service.title}
           </h3>
@@ -143,8 +144,8 @@ const ServiceCard = memo(({
           ))}
         </div>
 
-        <div className="mt-auto flex items-center gap-2 text-sm font-black uppercase tracking-widest
-                        text-primary group-hover:text-foreground transition-colors duration-300">
+        <div className="mt-auto flex items-center gap-2 text-sm font-bold uppercase tracking-widest
+                        text-primary group-hover:text-black transition-colors duration-300">
           <span>Get Free Estimate</span>
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300 shrink-0" />
         </div>
@@ -181,12 +182,12 @@ const Services = () => {
               <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20
                               px-4 py-2 rounded-full mb-5">
                 <span className="w-2 h-2 bg-primary rounded-full" />
-                <span className="text-primary text-[11px] font-black uppercase tracking-[0.2em]">
+                <span className="text-primary text-[11px] font-bold uppercase tracking-[0.2em]">
                   {badge}
                 </span>
               </div>
 
-              <h2 className="text-4xl md:text-5xl xl:text-[3.25rem] font-black text-foreground
+              <h2 className="text-4xl md:text-5xl xl:text-[3.25rem] font-bold text-black
                              leading-[1.1] tracking-tight">
                 {headline.prefix}{" "}
                 <span className="text-primary">{headline.highlight}</span>{" "}
@@ -216,7 +217,7 @@ const Services = () => {
                                transition-all duration-300"
                   >
                     <div className="absolute top-0 left-0 right-0 h-[3px] bg-primary rounded-t-xl" />
-                    <div className="text-2xl md:text-3xl font-black text-primary leading-none mb-1 pt-1">
+                    <div className="text-2xl md:text-3xl font-bold text-primary leading-none mb-1 pt-1">
                       <AnimatedNumber value={stat.value} suffix={stat.suffix} />
                     </div>
                     <div className="text-[9px] md:text-[10px] font-bold text-muted-foreground
@@ -250,7 +251,7 @@ const Services = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.65 }}
           className="relative overflow-hidden rounded-3xl"
-          style={{ background: "linear-gradient(135deg, #3a0000 0%, #6b0000 35%, #4a0000 65%, #200000 100%)" }}
+          style={{ background: "linear-gradient(135deg, hsl(217 78% 8%) 0%, hsl(221 84% 15%) 50%, hsl(217 78% 5%) 100%)" }}
         >
           {/* Grid lines — white so they're visible on red bg */}
           <div className="absolute inset-0 pointer-events-none" style={{
@@ -266,7 +267,7 @@ const Services = () => {
 
           {/* Top-right radial glow — warm highlight */}
           <div className="absolute -top-24 -right-24 w-[480px] h-[480px] pointer-events-none"
-            style={{ background: "radial-gradient(ellipse, rgba(255,120,120,0.4) 0%, transparent 65%)" }} />
+            style={{ background: "radial-gradient(ellipse, hsla(var(--secondary), 0.3) 0%, transparent 65%)" }} />
 
           {/* Bottom-left dark shadow glow */}
           <div className="absolute -bottom-24 -left-24 w-[400px] h-[400px] pointer-events-none"
@@ -275,11 +276,11 @@ const Services = () => {
           {/* Centre horizontal glow strip */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
                           w-[700px] h-[180px] pointer-events-none"
-            style={{ background: "radial-gradient(ellipse, rgba(255,200,200,0.12) 0%, transparent 65%)" }} />
+            style={{ background: "radial-gradient(ellipse, hsla(var(--accent), 0.1) 0%, transparent 65%)" }} />
 
           {/* Inset border */}
           <div className="absolute inset-0 rounded-3xl pointer-events-none" style={{
-            boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.12), 0 32px 80px -16px rgba(196,18,18,0.6)",
+            boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.12), 0 32px 80px -16px hsla(var(--primary), 0.6)",
           }} />
 
           {/* Content */}
@@ -290,13 +291,13 @@ const Services = () => {
               <div className="text-center lg:text-left max-w-xl">
                 <div className="inline-flex items-center gap-2.5 mb-6 border border-white/10
                                 bg-white/5 backdrop-blur-sm rounded-full px-4 py-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                  <span className="text-white/90 text-[10px] font-black uppercase tracking-[0.25em]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+                  <span className="text-white/90 text-[10px] font-bold uppercase tracking-[0.25em]">
                     Free Consultation Available
                   </span>
                 </div>
 
-                <h3 className="text-3xl md:text-4xl xl:text-5xl font-black text-white
+                <h3 className="text-3xl md:text-4xl xl:text-5xl font-bold text-white
                                leading-[1.05] tracking-tight mb-5">
                   {cta.title}
                 </h3>
@@ -322,36 +323,29 @@ const Services = () => {
               {/* Right buttons */}
               <div className="flex flex-col gap-3 w-full lg:w-auto lg:min-w-[240px] shrink-0">
 
-                {/* Primary — red gradient */}
+                {/* Primary — solid white */}
                 <motion.a
                   href={cta.buttonLink}
                   whileHover={{ scale: 1.04, y: -2 }}
                   whileTap={{ scale: 0.97 }}
                   className="group/b1 relative flex items-center justify-center gap-3
-                             px-10 py-5 rounded-2xl overflow-hidden font-black text-sm
-                             uppercase tracking-widest text-white transition-all duration-300"
-                  style={{ background: "linear-gradient(135deg,#c41212,#ff4444,#c41212)" }}
+                             px-10 py-5 rounded-2xl overflow-hidden font-bold text-sm
+                             uppercase tracking-widest bg-white text-primary hover:bg-muted shadow-lg transition-all duration-300"
                 >
-                  <div className="absolute inset-0 bg-white/0 group-hover/b1:bg-white/10 transition-all duration-300" />
                   <span className="relative">{cta.buttonText}</span>
                   <ArrowRight className="relative w-4 h-4 group-hover/b1:translate-x-1 transition-transform" />
                 </motion.a>
 
-                {/* Secondary — gradient border */}
+                {/* Secondary — transparent with white border */}
                 <motion.a
                   href="tel:+1234567890"
                   whileHover={{ scale: 1.04, y: -2 }}
                   whileTap={{ scale: 0.97 }}
                   className="group/b2 relative flex items-center justify-center gap-3
                              px-10 py-5 rounded-2xl overflow-hidden font-bold text-sm
-                             uppercase tracking-widest text-white/80
-                             hover:text-white transition-all duration-300"
-                  style={{
-                    background: "linear-gradient(#0f0f0f,#0f0f0f) padding-box, linear-gradient(135deg,rgba(196,18,18,0.6),rgba(255,100,100,0.3)) border-box",
-                    border: "1px solid transparent",
-                  }}
+                             uppercase tracking-widest text-white border-2 border-white/20
+                             hover:border-white/40 hover:bg-white/10 backdrop-blur-sm transition-all duration-300"
                 >
-                  <div className="absolute inset-0 bg-white/0 group-hover/b2:bg-white/5 transition-all duration-300" />
                   <Phone className="relative w-4 h-4" />
                   <span className="relative">Call Now</span>
                 </motion.a>
@@ -363,7 +357,7 @@ const Services = () => {
 
       {/* Divider */}
       <div className="absolute bottom-0 left-0 w-full z-0 pointer-events-none">
-        <PaintDivider color="hsl(var(--primary))" className="translate-y-[1px]" />
+        <WaterDivider color="hsl(var(--primary))" className="translate-y-[1px]" />
       </div>
     </section>
   );

@@ -2,54 +2,54 @@
   "navbar": {
     "services": [
       {
-        "title": "ROOFING SOLUTIONS",
-        "description": "Expert residential and commercial roofing installations and replacements",
-        "icon": "Home",
+        "title": "EXTERIOR CLEANING",
+        "description": "Professional power washing and soft washing for homes and businesses",
+        "icon": "Droplets",
         "items": [
-          "Shingle Roofing",
-          "Metal Roofing",
-          "Flat Roofing",
-          "Roof Repairs",
-          "Roof Replacement"
+          "Power Washing",
+          "Soft Washing",
+          "House Washing",
+          "Driveway Cleaning",
+          "Patio Restoration"
         ],
         "features": [
-          "Quality Craftsmanship",
-          "Insurance Claims Assistance",
-          "Competitive Retail Pricing"
+          "Licensed & Insured",
+          "Free Estimates",
+          "Fast Response Time"
         ]
       },
       {
-        "title": "INSPECTIONS & MAINTENANCE",
-        "description": "Thorough assessments and tune-ups to protect your investment",
-        "icon": "ClipboardCheck",
-        "items": [
-          "Roof Inspections",
-          "Gutter Cleaning",
-          "Roof Tune-Ups",
-          "Sealing Accessories",
-          "Roof Algae Cleaning"
-        ],
-        "features": [
-          "Thorough Property Assessment",
-          "Preventative Maintenance",
-          "Extended Roof Longevity"
-        ]
-      },
-      {
-        "title": "SOLAR & ADDITIONAL",
-        "description": "Solar panel solutions and specialty roofing services",
+        "title": "GUTTER & WINDOW",
+        "description": "Complete gutter cleaning and window washing solutions",
         "icon": "Sun",
         "items": [
-          "Solar Panel Installation",
-          "Solar Panel Removal",
-          "Skylight Installation",
-          "Attic Insulation",
-          "Gutter Installation"
+          "Gutter Cleaning",
+          "Gutter Brightening",
+          "Window Cleaning",
+          "Interior Windows",
+          "Exterior Windows"
+        ],
+        "features": [
+          "Thorough Service",
+          "Curb Appeal Enhancement",
+          "Extended Property Longevity"
+        ]
+      },
+      {
+        "title": "SPECIALTY SERVICES",
+        "description": "Targeted cleaning solutions for every exterior surface",
+        "icon": "Sparkles",
+        "items": [
+          "Roof Cleaning",
+          "Siding Washing",
+          "Concrete Cleaning",
+          "Commercial Properties",
+          "Deck & Fence Cleaning"
         ],
         "features": [
           "One-Stop Shop",
-          "Energy Efficiency",
-          "Professional Installation"
+          "Mold & Algae Removal",
+          "Professional Equipment"
         ]
       }
     ],
@@ -82,12 +82,12 @@
     ],
     "stats": [
       {
-        "value": "2023",
+        "value": "2020",
         "label": "Established",
         "icon": "Calendar"
       },
       {
-        "value": "Dallas",
+        "value": "Philadelphia",
         "label": "Headquarters",
         "icon": "MapPin"
       },
@@ -98,28 +98,28 @@
       },
       {
         "value": "Free",
-        "label": "Consultation",
+        "label": "Estimate",
         "icon": "MessageSquare"
       }
     ],
     "cta": {
-      "title": "Get Your Free Consultation",
-      "description": "Expert roofing and solar solutions tailored to your needs",
+      "title": "Get Your Free Estimate",
+      "description": "Professional power washing, soft washing, gutter cleaning, and window washing tailored to your needs",
       "buttonText": "Contact Us",
       "buttonLink": "#contact"
     }
   },
   "hero": {
-    "badge": "Ascend to Excellence",
+    "badge": "Free Quote. Fast Response. Great Service.",
     "headlines": [
-      "Expert Roofing",
-      "& Solar Solutions",
+      "Professional Exterior",
+      "& Cleaning Solutions",
       "You Can Trust"
     ],
-    "description": "Whether it's residential or commercial, we ensure top-quality work. Our team's dedication to quality craftsmanship and exceptional customer care sets us apart. Contact us today for a free consultation!",
+    "description": "Whether it's residential or commercial, we ensure top-quality cleaning results. Our team's dedication to discipline, teamwork, and exceptional customer care sets us apart. Contact us today for a free estimate!",
     "buttons": [
       {
-        "text": "Get Free Consultation",
+        "text": "Get Free Estimate",
         "href": "#contact",
         "primary": true,
         "icon": "FiArrowRight"
@@ -133,12 +133,12 @@
     ],
     "stats": [
       {
-        "value": "Dallas, TX",
+        "value": "King of Prussia",
         "label": "Headquarters",
         "icon": "FiMapPin"
       },
       {
-        "value": "2023",
+        "value": "2020",
         "label": "Founded",
         "icon": "RiBuildingLine"
       },
@@ -149,27 +149,27 @@
       },
       {
         "value": "Free",
-        "label": "Consultation",
+        "label": "Estimate",
         "icon": "FiThumbsUp"
       }
     ]
   },
   "about": {
-    "badge": "Founded 2023",
+    "badge": "Founded 2020",
     "headline": {
       "prefix": "Welcome to",
-      "highlight": "Apex Roofing",
-      "suffix": "& Solar."
+      "highlight": "L&M Services",
+      "suffix": "LLP."
     },
-    "description": "Our journey began in the heart of <span class=\"font-semibold text-primary\">Dallas, Texas</span>. With a focus on delivering exceptional roofing solutions for both residential and commercial properties, we pride ourselves on our professionalism and expertise. Whether you need assistance with insurance claims or prefer our competitive retail pricing, rest assured that we have you covered.",
+    "description": "Our journey began in the heart of <span class=\"font-semibold text-primary\">King of Prussia, Pennsylvania</span>. With a focus on delivering exceptional exterior cleaning solutions for both residential and commercial properties, we pride ourselves on our professionalism and expertise. Whether you need power washing, soft washing, gutter cleaning, or window washing, rest assured that we have you covered.",
     "image": {
-      "src": "ApexRoofingTeam",
-      "alt": "Apex Roofing & Solar professional roofing team",
-      "badge": "Ascend to Excellence"
+      "src": "LMTeamPhoto",
+      "alt": "L&M Services LLP professional exterior cleaning team",
+      "badge": "Free Quote. Fast Response. Great Service."
     },
     "stats": [
       {
-        "value": 2023,
+        "value": 2020,
         "suffix": "",
         "label": "Year Founded"
       },
@@ -186,7 +186,7 @@
     ],
     "buttons": [
       {
-        "text": "FREE CONSULTATION",
+        "text": "FREE ESTIMATE",
         "href": "#contact",
         "primary": true
       },
@@ -197,35 +197,35 @@
       }
     ],
     "trustBadges": {
-      "founded": 2023,
-      "headquarters": "Dallas, Texas"
+      "founded": 2020,
+      "headquarters": "King of Prussia, Pennsylvania"
     }
   },
   "aboutStory": {
     "badge": "Our Story",
     "headline": {
       "prefix": "Meet the",
-      "highlight": "Owner",
-      "suffix": "— Luis Hermocilla"
+      "highlight": "Founder",
+      "suffix": "— Thomas"
     },
     "description": [
-      "Our journey began in the heart of Dallas, Texas. The owner, Luis Hermocilla, grew tired of greedy contractors overpromising and underdelivering. After working in the roofing industry for several years, he created his own company with a mission to be different.",
-      "Founded in 2023, Apex Roofing & Solar aims to be the apex in roofing while providing exemplary service. We take immense pride in providing top-notch service to our valued customers.",
-      "Our team's dedication to quality craftsmanship and exceptional customer care sets us apart in the residential and commercial roofing industry. Whether you are dealing with an insurance claim or seeking retail pricing options, you can trust us to deliver unparalleled service from start to finish."
+      "Our journey began in the Greater Philadelphia Area. The founder, Thomas, alongside his team of former D1 athletes, transitioned from the baseball field to the business sector with a unique combination of discipline, teamwork, and competitive drive.",
+      "Founded in 2020, L&M Services LLP aims to bring the same attention to detail to cleaning your home as we did on the diamond. We take immense pride in providing top-notch service to our valued customers.",
+      "Our team's dedication to a strong work ethic and strategic mindset sets us apart in the residential and commercial exterior cleaning industry. Whether you need power washing, soft washing, or gutter cleaning, you can trust us to deliver unparalleled service from start to finish."
     ],
     "image": {
-      "src": "LuisHermocilla",
-      "alt": "Luis Hermocilla - Owner, Apex Roofing & Solar",
-      "badge": "Owner & Founder"
+      "src": "ThomasFounder",
+      "alt": "Thomas - Founder, L&M Services LLP",
+      "badge": "Founder & Former D1 Athlete"
     },
     "stats": [
       {
-        "value": 2023,
+        "value": 2020,
         "suffix": "",
         "label": "Year Founded"
       },
       {
-        "value": "Dallas",
+        "value": "Philadelphia",
         "suffix": "",
         "label": "Headquarters"
       },
@@ -240,21 +240,21 @@
     "badge": "Our Services",
     "headline": {
       "prefix": "Comprehensive",
-      "highlight": "Roofing & Solar",
+      "highlight": "Exterior Cleaning",
       "suffix": "Solutions"
     },
     "description": [
-      "Apex Roofing & Solar offers a comprehensive range of services to meet your roofing needs. From roof inspections and repairs to complete roof replacements, our experienced team ensures top-quality workmanship.",
-      "We specialize in shingle roofing, metal roofing, and flat roofing installations. Additionally, we provide gutter cleaning, skylight installation, and attic insulation services to enhance the functionality and longevity of your roof."
+      "L&M Services LLP offers a comprehensive range of services to meet your exterior cleaning needs. From power washing and soft washing to gutter cleaning and window washing, our experienced team ensures top-quality results.",
+      "We specialize in safe soft washing techniques for delicate surfaces and high-pressure power washing for durable surfaces. Additionally, we provide roof cleaning, siding washing, and concrete cleaning to enhance your property's curb appeal."
     ],
     "stats": [
       {
-        "value": 3,
+        "value": 4,
         "suffix": "",
         "label": "Core Services"
       },
       {
-        "value": 8,
+        "value": 10,
         "suffix": "+",
         "label": "Specialty Offerings"
       },
@@ -267,188 +267,188 @@
     "services": [
       {
         "number": "01",
-        "title": "Roof Inspection",
-        "description": "A thorough assessment of your roof, gutters, skylights, chimneys, and property. Identify potential issues before they become costly problems.",
-        "icon": "Search",
-        "tag": "Inspection",
+        "title": "Power Washing",
+        "description": "High-pressure cleaning for durable surfaces like concrete driveways, patios, sidewalks, and decks. Restore your hard surfaces to like-new condition.",
+        "icon": "Droplets",
+        "tag": "High Pressure",
         "features": [
-          "Roof Assessment",
-          "Gutter Inspection",
-          "Skylight Check",
-          "Chimney Inspection"
+          "Concrete Driveways",
+          "Patio Restoration",
+          "Sidewalk Cleaning",
+          "Deck Cleaning"
         ]
       },
       {
         "number": "02",
-        "title": "Solar Panel Services",
-        "description": "Need to remove or install solar panels? We are your one-stop shop for all solar roofing needs with professional installation and removal.",
-        "icon": "Sun",
-        "tag": "Solar",
+        "title": "Soft Washing",
+        "description": "Low-pressure cleaning with specialized solutions to safely remove mold, algae, and dirt from delicate surfaces like siding and roofs.",
+        "icon": "Sparkles",
+        "tag": "Soft Wash",
         "features": [
-          "Solar Panel Installation",
-          "Solar Panel Removal",
-          "Seamless Integration",
-          "Energy Efficiency"
+          "Siding Cleaning",
+          "Roof Cleaning",
+          "Mold Removal",
+          "Algae Treatment"
         ]
       },
       {
         "number": "03",
-        "title": "Roof Maintenance & Tune-Ups",
-        "description": "Roof tune-ups including sealing all accessories and exposed nail heads. Gutter cleaning and roof algae cleaning services also available.",
+        "title": "Gutter Cleaning",
+        "description": "Thorough gutter cleaning and brightening services to protect your property from water damage and improve overall appearance.",
         "icon": "Wrench",
-        "tag": "Maintenance",
+        "tag": "Gutters",
         "features": [
-          "Sealing Accessories",
-          "Sealing Nail Heads",
           "Gutter Cleaning",
-          "Roof Algae Cleaning"
+          "Downspout Clearing",
+          "Gutter Brightening",
+          "Water Flow Testing"
         ]
       },
       {
         "number": "04",
-        "title": "Shingle Roofing",
-        "description": "Professional shingle roofing installation and replacement for residential and commercial properties using premium materials.",
-        "icon": "Home",
-        "tag": "Installation",
+        "title": "Window Cleaning",
+        "description": "Professional interior and exterior window washing for streak-free, crystal-clear results that boost your property's curb appeal.",
+        "icon": "Sun",
+        "tag": "Windows",
         "features": [
-          "Asphalt Shingles",
-          "Architectural Shingles",
-          "Full Replacement",
-          "New Construction"
+          "Interior Windows",
+          "Exterior Windows",
+          "Screen Cleaning",
+          "Streak-Free Finish"
         ]
       },
       {
         "number": "05",
-        "title": "Metal Roofing",
-        "description": "Durable, energy-efficient metal roofing systems offering superior protection and longevity for your property.",
-        "icon": "Hammer",
-        "tag": "Metal",
+        "title": "House Washing",
+        "description": "Complete exterior house washing using the appropriate method for your siding material to safely remove dirt, grime, and organic growth.",
+        "icon": "Home",
+        "tag": "Residential",
         "features": [
-          "Standing Seam",
-          "Metal Panels",
-          "Energy Efficient",
-          "Long Lifespan"
+          "Vinyl Siding",
+          "Brick Washing",
+          "Stucco Cleaning",
+          "Full Exterior Wash"
         ]
       },
       {
         "number": "06",
-        "title": "Flat Roofing",
-        "description": "Expert flat roofing installations for commercial and residential applications with reliable, watertight systems.",
-        "icon": "Building2",
-        "tag": "Commercial",
+        "title": "Roof Cleaning",
+        "description": "Safe soft washing treatment to eliminate black streaks, moss, and algae from your roof without damaging shingles.",
+        "icon": "Shield",
+        "tag": "Roof Care",
         "features": [
-          "TPO Systems",
-          "EPDM Roofing",
-          "Modified Bitumen",
-          "Commercial Grade"
+          "Black Streak Removal",
+          "Moss Treatment",
+          "Algae Elimination",
+          "Shingle-Safe Methods"
         ]
       },
       {
         "number": "07",
-        "title": "Skylight Installation",
-        "description": "Enhance natural lighting and energy efficiency with professional skylight installation integrated with your roofing system.",
-        "icon": "CloudSun",
-        "tag": "Specialty",
+        "title": "Concrete Cleaning",
+        "description": "Restore your concrete surfaces with professional pressure washing that removes oil stains, tire marks, and years of buildup.",
+        "icon": "Building2",
+        "tag": "Concrete",
         "features": [
-          "Natural Lighting",
-          "Energy Savings",
-          "Custom Placement",
-          "Weather-Tight Seal"
+          "Driveway Cleaning",
+          "Oil Stain Removal",
+          "Walkway Restoration",
+          "Garage Floor Cleaning"
         ]
       },
       {
         "number": "08",
-        "title": "Attic Insulation",
-        "description": "Improve energy efficiency and comfort with professional attic insulation services that complement your roofing system.",
-        "icon": "Thermometer",
-        "tag": "Insulation",
+        "title": "Commercial Properties",
+        "description": "Full-service exterior cleaning for commercial buildings, retail spaces, and business properties throughout Greater Philadelphia.",
+        "icon": "Building",
+        "tag": "Commercial",
         "features": [
-          "Energy Efficiency",
-          "Temperature Control",
-          "Moisture Protection",
-          "Cost Savings"
+          "Storefront Cleaning",
+          "Parking Lot Washing",
+          "Building Exterior Wash",
+          "Scheduled Maintenance"
         ]
       },
       {
         "number": "09",
-        "title": "Gutter Services",
-        "description": "Complete gutter cleaning and installation services to protect your property from water damage.",
-        "icon": "Droplets",
-        "tag": "Drainage",
+        "title": "Deck & Fence Cleaning",
+        "description": "Gentle yet effective cleaning for wooden decks and fences to remove mildew, algae, and weathering without damage.",
+        "icon": "LayoutGrid",
+        "tag": "Wood Care",
         "features": [
-          "Gutter Cleaning",
-          "Gutter Installation",
-          "Downspout Service",
-          "Water Diversion"
+          "Deck Restoration",
+          "Fence Cleaning",
+          "Mildew Removal",
+          "Surface Preparation"
         ]
       },
       {
         "number": "10",
-        "title": "Roof Repairs",
-        "description": "Expert roof repair services addressing leaks, storm damage, and general wear to extend the life of your roof.",
-        "icon": "Shield",
-        "tag": "Repair",
+        "title": "Patio Restoration",
+        "description": "Bring your patio back to life with professional cleaning that removes built-up grime, moss, and stains from paver and stone surfaces.",
+        "icon": "TreePine",
+        "tag": "Outdoor Living",
         "features": [
-          "Leak Repair",
-          "Storm Damage Repair",
-          "Shingle Replacement",
-          "Emergency Service"
+          "Paver Cleaning",
+          "Stone Patio Washing",
+          "Joint Sand Replenishment",
+          "Sealing Available"
         ]
       }
     ],
     "cta": {
-      "title": "Ready for Expert Roofing Service?",
-      "description": "Apex Roofing & Solar provides comprehensive roofing and solar solutions tailored to your specific needs. Contact us for your free consultation.",
-      "buttonText": "Book Now",
+      "title": "Ready for Professional Exterior Cleaning?",
+      "description": "L&M Services LLP provides comprehensive cleaning solutions tailored to your specific needs. Contact us for your free estimate.",
+      "buttonText": "Get Free Estimate",
       "buttonLink": "#contact"
     }
   },
   "whyChooseUs": {
     "section": {
       "badge": "WHY CHOOSE US",
-      "headline": "Ascend to <span class=\"text-primary\">Excellence</span>",
-      "description": "At Apex Roofing & Solar, we take immense pride in providing top-notch service to our valued customers. Our team's dedication to quality craftsmanship and exceptional customer care sets us apart."
+      "headline": "The <span class=\"text-primary\">L&M Difference</span>",
+      "description": "At L&M Services LLP, we take immense pride in providing top-notch service to our valued customers. Our team's background in D1 athletics brings discipline, teamwork, and a competitive drive to every project."
     },
     "features": [
       {
         "icon": "Award",
-        "title": "Quality Craftsmanship",
-        "description": "Our experienced team ensures top-quality workmanship on every project. We never cut corners and deliver results that stand the test of time."
+        "title": "Licensed & Insured",
+        "description": "Our professional team is fully licensed and insured, giving you peace of mind knowing your property is in qualified hands."
       },
       {
         "icon": "Handshake",
-        "title": "Exceptional Customer Care",
-        "description": "We prioritize customer satisfaction with every project. From consultation to completion, you'll experience unparalleled service every step of the way."
+        "title": "Athlete's Work Ethic",
+        "description": "As former D1 baseball players, we bring unmatched discipline and attention to detail. We treat every property with the same focus we brought to the diamond."
       },
       {
         "icon": "FileText",
-        "title": "Insurance Claims Assistance",
-        "description": "Need help navigating your insurance claim? We assist you through the entire process to ensure you get the coverage you deserve."
+        "title": "Free Estimates",
+        "description": "Get a no-obligation, transparent quote for any of our services. We believe in upfront pricing with no hidden fees or surprise charges."
       },
       {
         "icon": "DollarSign",
-        "title": "Competitive Retail Pricing",
-        "description": "Prefer retail pricing? We offer competitive rates with complete transparency. No hidden fees, no surprise charges — just honest pricing."
+        "title": "Competitive Pricing",
+        "description": "We offer fair, competitive rates with complete transparency. No hidden fees, no surprise charges — just honest pricing for quality work."
       },
       {
-        "icon": "Shield",
-        "title": "Professional & Reliable",
-        "description": "Founded by Luis Hermocilla after years of seeing contractors overpromise and underdeliver. We do what we say and deliver what we promise."
+        "icon": "Zap",
+        "title": "Fast Response",
+        "description": "We pride ourselves on quick response times. When you reach out, we're on it — getting you scheduled and your property looking its best without delay."
       },
       {
-        "icon": "Sun",
+        "icon": "Sparkles",
         "title": "One-Stop Shop",
-        "description": "From roofing to solar, inspections to maintenance — we handle it all. No need to coordinate multiple contractors for your property needs."
+        "description": "From power washing to gutters, windows to roof cleaning — we handle it all. No need to coordinate multiple contractors for your property's exterior needs."
       }
     ],
     "stats": [
       {
-        "value": "2023",
+        "value": "2020",
         "suffix": "",
         "label": "Established"
       },
       {
-        "value": "Dallas",
+        "value": "Philadelphia",
         "suffix": "",
         "label": "Based In"
       },
@@ -460,21 +460,21 @@
       {
         "value": "Free",
         "suffix": "",
-        "label": "Consultation"
+        "label": "Estimate"
       }
     ],
     "cta": {
       "badge": "GET STARTED",
-      "title": "Experience the Apex <span class=\"\">Difference Today</span>",
-      "description": "Contact our team today for a free consultation. No obligation, just expert advice from your trusted roofing and solar partner.",
+      "title": "Experience the L&M <span class=\"\">Difference Today</span>",
+      "description": "Contact our team today for a free estimate. No obligation, just expert advice from your trusted exterior cleaning partner in Greater Philadelphia.",
       "trustBadges": [
-        "Professional",
-        "Reliable",
-        "Trusted"
+        "Licensed",
+        "Insured",
+        "Professional"
       ],
       "buttons": [
         {
-          "text": "Get Free Consultation",
+          "text": "Get Free Estimate",
           "href": "#contact",
           "primary": true
         },
@@ -494,58 +494,58 @@
     "projects": [
       {
         "number": "01",
-        "title": "Dallas Residential Shingle Roof",
+        "title": "King of Prussia House Wash",
         "category": "Residential",
         "image": "portfolio1",
-        "location": "Dallas, TX",
+        "location": "King of Prussia, PA",
         "year": "2025",
         "accent": "from-primary to-primary/80",
-        "scope": "Full Roof Replacement",
-        "desc": "Complete asphalt shingle roof replacement for a Dallas family home with upgraded architectural shingles and enhanced ventilation."
+        "scope": "Full Exterior House Wash",
+        "desc": "Complete soft wash treatment for a beautiful King of Prussia home, removing algae and restoring the siding's original brightness."
       },
       {
         "number": "02",
-        "title": "Commercial Metal Roofing",
+        "title": "Commercial Building Power Wash",
         "category": "Commercial",
         "image": "portfolio2",
-        "location": "Plano, TX",
+        "location": "Philadelphia, PA",
         "year": "2025",
         "accent": "from-primary to-primary/70",
-        "scope": "New Installation",
-        "desc": "Standing seam metal roof installation for a commercial warehouse, providing durability and energy efficiency for decades."
+        "scope": "Commercial Cleaning",
+        "desc": "High-pressure power washing for a commercial retail building, revitalizing the storefront and surrounding walkways."
       },
       {
         "number": "03",
-        "title": "Solar Panel Integration",
-        "category": "Solar",
+        "title": "Driveway & Patio Restoration",
+        "category": "Residential",
         "image": "portfolio3",
-        "location": "Richardson, TX",
+        "location": "Wayne, PA",
         "year": "2024",
         "accent": "from-primary/90 to-primary/60",
-        "scope": "Solar Installation",
-        "desc": "Seamless solar panel installation integrated with existing roofing system for maximum energy savings and curb appeal."
+        "scope": "Concrete & Patio Cleaning",
+        "desc": "Complete restoration of a stained concrete driveway and paver patio, bringing surfaces back to like-new condition."
       },
       {
         "number": "04",
-        "title": "Storm Damage Restoration",
-        "category": "Repair",
+        "title": "Gutter Cleaning & Brightening",
+        "category": "Maintenance",
         "image": "portfolio4",
-        "location": "Garland, TX",
+        "location": "Radnor, PA",
         "year": "2025",
         "accent": "from-primary to-primary/80",
-        "scope": "Insurance Claim Repair",
-        "desc": "Complete storm damage restoration including insurance claim assistance, roof replacement, and gutter installation."
+        "scope": "Gutter Service",
+        "desc": "Thorough gutter cleaning and exterior brightening that transformed the look of this home while improving drainage."
       },
       {
         "number": "05",
-        "title": "Flat Roof Commercial",
-        "category": "Commercial",
+        "title": "Roof Black Streak Removal",
+        "category": "Specialty",
         "image": "portfolio5",
-        "location": "Mesquite, TX",
+        "location": "Bryn Mawr, PA",
         "year": "2024",
         "accent": "from-primary/80 to-primary/60",
-        "scope": "Flat Roof System",
-        "desc": "TPO flat roofing system installation for a commercial retail building with enhanced insulation and waterproofing."
+        "scope": "Roof Soft Wash",
+        "desc": "Safe soft washing treatment that eliminated unsightly black streaks and moss from this asphalt shingle roof."
       }
     ],
     "button": {
@@ -557,8 +557,8 @@
     "section": {
       "badge": "Client Testimonials",
       "headline": "What Our Customers Say",
-      "description": "Hear from residential and commercial clients who have experienced the Apex Roofing & Solar difference",
-      "featured": "Trusted Roofing Partner in Dallas, TX"
+      "description": "Hear from residential and commercial clients who have experienced the L&M Services difference",
+      "featured": "Trusted Exterior Cleaning Partner in Greater Philadelphia"
     },
     "testimonials": [
       {
@@ -567,7 +567,7 @@
         "position": "Homeowner",
         "company": "Residential Client",
         "avatar": "RJ",
-        "text": "Apex Roofing & Solar replaced our entire roof and did an amazing job. Luis and his team were professional, on time, and the quality of work exceeded our expectations. Highly recommend!"
+        "text": "L&M Services power washed our entire property and did an amazing job. Thomas and his team were professional, on time, and the results exceeded our expectations. Highly recommend!"
       },
       {
         "id": 2,
@@ -575,7 +575,7 @@
         "position": "Business Owner",
         "company": "Commercial Client",
         "avatar": "MS",
-        "text": "We needed a flat roof for our retail store and Apex delivered. They handled everything from start to finish, including helping us with our insurance claim. True professionals."
+        "text": "We needed regular exterior cleaning for our retail store and L&M delivered. They handled everything from the storefront to the parking lot. True professionals."
       },
       {
         "id": 3,
@@ -583,7 +583,7 @@
         "position": "Property Manager",
         "company": "Commercial Client",
         "avatar": "DT",
-        "text": "As a property manager, I need contractors I can trust. Apex Roofing & Solar has been reliable, transparent, and their workmanship is top-tier. They're my go-to roofing partner."
+        "text": "As a property manager, I need contractors I can trust. L&M Services has been reliable, responsive, and their work is top-tier. They're my go-to exterior cleaning partner."
       },
       {
         "id": 4,
@@ -591,40 +591,40 @@
         "position": "Homeowner",
         "company": "Residential Client",
         "avatar": "JK",
-        "text": "We had solar panels installed along with a roof inspection. Apex handled both seamlessly. It was so convenient working with one company for everything. Great experience!"
+        "text": "We had soft washing and window cleaning done. L&M handled both seamlessly. It was so convenient working with one company for everything. Great experience!"
       },
       {
         "id": 5,
-        "name": "Luis Hermocilla",
-        "position": "Owner",
-        "company": "Apex Roofing & Solar",
-        "avatar": "LH",
-        "text": "I founded Apex Roofing & Solar because I was tired of seeing contractors overpromise and underdeliver. Our commitment is simple: quality craftsmanship, exceptional care, and honest service every time."
+        "name": "Thomas",
+        "position": "Founder",
+        "company": "L&M Services LLP",
+        "avatar": "TH",
+        "text": "I founded L&M Services with my team because we wanted to bring the same discipline and attention to detail from our athletic careers to serving homeowners. Our commitment is simple: quality work, fair pricing, and great service every time."
       }
     ],
     "videos": [
       {
         "id": "v1",
         "videoId": "dQw4w9WgXcQ",
-        "title": "Residential Roof Replacement",
+        "title": "Residential House Wash",
         "name": "Robert J."
       },
       {
         "id": "v2",
         "videoId": "dQw4w9WgXcQ",
-        "title": "Commercial Flat Roof Project",
+        "title": "Commercial Power Wash Project",
         "name": "Maria S."
       },
       {
         "id": "v3",
         "videoId": "dQw4w9WgXcQ",
-        "title": "Solar Panel Installation",
+        "title": "Gutter Cleaning & Brightening",
         "name": "Jennifer K."
       },
       {
         "id": "v4",
         "videoId": "dQw4w9WgXcQ",
-        "title": "Emergency Roof Repair",
+        "title": "Driveway Restoration",
         "name": "David T."
       }
     ],
@@ -638,7 +638,7 @@
     "section": {
       "badge": "Knowledge Base",
       "headline": "Frequently Asked Questions",
-      "description": "Expert answers to common questions about roofing, solar, inspections, and our services."
+      "description": "Expert answers to common questions about power washing, soft washing, gutter cleaning, and our services."
     },
     "categories": [
       {
@@ -647,152 +647,148 @@
         "icon": null
       },
       {
-        "id": "roofing",
-        "label": "Roofing",
-        "icon": "Home"
+        "id": "washing",
+        "label": "Washing",
+        "icon": "Droplets"
       },
       {
-        "id": "solar",
-        "label": "Solar",
-        "icon": "Sun"
+        "id": "softwash",
+        "label": "Soft Washing",
+        "icon": "Sparkles"
       },
       {
-        "id": "insurance",
-        "label": "Insurance",
-        "icon": "Shield"
-      },
-      {
-        "id": "maintenance",
-        "label": "Maintenance",
+        "id": "gutters",
+        "label": "Gutters",
         "icon": "Wrench"
+      },
+      {
+        "id": "windows",
+        "label": "Windows",
+        "icon": "Sun"
       }
     ],
     "items": [
       {
         "id": 1,
-        "category": "roofing",
-        "question": "What roofing services do you offer?",
-        "answer": "Apex Roofing & Solar offers a comprehensive range of roofing services including roof inspections, repairs, complete replacements, shingle roofing, metal roofing, and flat roofing installations. We also provide gutter services, skylight installation, and attic insulation to enhance your roof's functionality and longevity.",
+        "category": "washing",
+        "question": "What is the difference between soft washing and power washing?",
+        "answer": "Soft washing uses low-pressure water combined with specialized cleaning solutions to safely remove mold, algae, and dirt from delicate surfaces like siding and roofs. Power washing uses high-pressure water to clean durable surfaces such as concrete, driveways, and patios. Choosing the right method protects your property while delivering the best results.",
         "metadata": [
           {
-            "label": "Residential",
-            "value": "Shingle, metal, flat"
+            "label": "Soft Washing",
+            "value": "Low pressure + solutions"
           },
           {
-            "label": "Commercial",
-            "value": "All systems available"
+            "label": "Power Washing",
+            "value": "High pressure water"
           }
         ]
       },
       {
         "id": 2,
-        "category": "solar",
-        "question": "Do you handle solar panel installation and removal?",
-        "answer": "Yes! We are your one-stop shop for solar panel services. Whether you need panels installed on a new or existing roof, or need them removed for roof work, our team handles it all professionally and efficiently.",
+        "category": "softwash",
+        "question": "Is soft washing safe for my home's siding and roof?",
+        "answer": "Yes! Soft washing is the safest method for cleaning siding, roofs, and other delicate exterior surfaces. The low-pressure application combined with biodegradable cleaning solutions effectively removes organic growth without risking damage that high-pressure washing could cause.",
         "metadata": [
           {
-            "label": "Installation",
-            "value": "Full service"
+            "label": "Safe for",
+            "value": "Siding, roofs, stucco"
           },
           {
-            "label": "Removal",
-            "value": "Safe & professional"
+            "label": "Solutions",
+            "value": "Biodegradable & safe"
           }
         ]
       },
       {
         "id": 3,
-        "category": "insurance",
-        "question": "Can you help with insurance claims?",
-        "answer": "Absolutely. We assist homeowners and business owners with the insurance claim process. Whether you're dealing with storm damage, hail, or other covered events, we help document the damage, communicate with your insurance provider, and ensure you receive the coverage you deserve.",
+        "category": "washing",
+        "question": "How often should I have my house washed in King of Prussia, PA?",
+        "answer": "In the Greater Philadelphia area, we generally recommend having your home's exterior professionally cleaned once per year. However, properties with significant tree coverage, high humidity exposure, or visible mold and algae growth may benefit from more frequent cleanings. We can assess your property and recommend the ideal schedule.",
         "metadata": [
           {
-            "label": "Claim assistance",
-            "value": "Full support"
+            "label": "Recommended",
+            "value": "Once per year"
           },
           {
-            "label": "Documentation",
-            "value": "We handle it"
+            "label": "Factors",
+            "value": "Tree coverage, humidity"
           }
         ]
       },
       {
         "id": 4,
-        "category": "roofing",
-        "question": "How long does a roof replacement take?",
-        "answer": "Most residential roof replacements are completed within one to three days, depending on the size, material type, and weather conditions. Commercial projects may take longer. We provide a clear timeline during your free consultation so you know exactly what to expect.",
+        "category": "washing",
+        "question": "What surfaces can you power wash?",
+        "answer": "We can power wash durable surfaces including concrete driveways, sidewalks, patios, brick walls, stone walkways, and garage floors. These hard surfaces can withstand high-pressure cleaning and benefit greatly from the deep clean it provides.",
         "metadata": [
           {
-            "label": "Residential",
-            "value": "1-3 days typically"
+            "label": "Suitable surfaces",
+            "value": "Concrete, brick, stone"
           },
           {
-            "label": "Commercial",
-            "value": "Project dependent"
+            "label": "Benefits",
+            "value": "Deep clean & restoration"
           }
         ]
       },
       {
         "id": 5,
-        "category": "maintenance",
-        "question": "What does a roof tune-up include?",
-        "answer": "Our roof tune-up service includes sealing all accessories and exposed nail heads, gutter cleaning, and roof algae cleaning. Regular maintenance extends the life of your roof and prevents minor issues from becoming major problems.",
+        "category": "washing",
+        "question": "How much does house washing or power washing cost?",
+        "answer": "Pricing varies based on the size of your property, the surfaces being cleaned, and the methods required. That's why we offer free, no-obligation estimates. Contact us at 215-346-6027 or estimate@l-mservices.com and we'll provide a transparent quote tailored to your specific needs.",
         "metadata": [
           {
-            "label": "Tune-up includes",
-            "value": "Sealing, cleaning, inspection"
+            "label": "Pricing",
+            "value": "Varies by project"
           },
           {
-            "label": "Frequency",
-            "value": "As needed"
+            "label": "Estimates",
+            "value": "Free & transparent"
           }
         ]
       },
       {
         "id": 6,
-        "category": "roofing",
-        "question": "What is included in a roof inspection?",
-        "answer": "Our thorough roof inspection includes assessment of your roof, gutters, skylights, chimneys, and surrounding property. We identify potential issues, document findings, and provide recommendations to protect your investment.",
+        "category": "softwash",
+        "question": "Why are there black streaks on my roof or siding?",
+        "answer": "Black streaks on your roof are typically caused by a type of algae called Gloeocapsa magma. On siding, dark stains often come from mold, mildew, or dirt accumulation. Our soft washing treatments effectively eliminate these unsightly streaks and help prevent them from returning.",
         "metadata": [
           {
-            "label": "Areas inspected",
-            "value": "Roof, gutters, skylights, chimney"
+            "label": "Roof streaks",
+            "value": "Algae growth"
           },
           {
-            "label": "Outcome",
-            "value": "Detailed report"
+            "label": "Siding stains",
+            "value": "Mold & mildew"
           }
         ]
       },
       {
         "id": 7,
-        "category": "roofing",
-        "question": "What roofing materials do you work with?",
-        "answer": "We specialize in asphalt shingle roofing, metal roofing, and flat roofing systems including TPO and EPDM. During your consultation, we'll help you choose the best material based on your budget, property type, and long-term goals.",
+        "category": "softwash",
+        "question": "How long do the results of soft washing last?",
+        "answer": "With our professional soft washing treatments, results typically last 12-18 months depending on environmental conditions. We use high-quality cleaning solutions that not only remove organic growth but also inhibit regrowth for longer-lasting results.",
         "metadata": [
           {
-            "label": "Shingle",
-            "value": "Asphalt, architectural"
+            "label": "Longevity",
+            "value": "12-18 months"
           },
           {
-            "label": "Metal",
-            "value": "Standing seam, panels"
-          },
-          {
-            "label": "Flat",
-            "value": "TPO, EPDM"
+            "label": "Inhibits",
+            "value": "Regrowth treatment"
           }
         ]
       },
       {
         "id": 8,
-        "category": "maintenance",
+        "category": "gutters",
         "question": "Do you offer gutter cleaning services?",
-        "answer": "Yes, gutter cleaning is part of our maintenance services. Clean gutters are essential for proper water drainage and protecting your roof and foundation from water damage.",
+        "answer": "Yes! Gutter cleaning is one of our core services. We thoroughly remove debris from gutters and downspouts, ensuring proper water flow. We also offer gutter brightening to improve the exterior appearance of your gutter system.",
         "metadata": [
           {
             "label": "Service",
-            "value": "Gutter cleaning available"
+            "value": "Gutter cleaning & brightening"
           },
           {
             "label": "Frequency",
@@ -802,40 +798,40 @@
       },
       {
         "id": 9,
-        "category": "roofing",
-        "question": "Do you offer free consultations?",
-        "answer": "Yes! We offer free consultations to assess your roofing or solar needs. Contact us by phone at (469) 396-4022 or email Luis@apexroofingandsolar.com to schedule yours today.",
+        "category": "windows",
+        "question": "Do you clean both interior and exterior windows?",
+        "answer": "Yes! We offer professional window cleaning for both interior and exterior windows. Our streak-free results will leave your windows crystal clear, enhancing your home's natural light and overall curb appeal.",
         "metadata": [
           {
-            "label": "Consultation",
-            "value": "Free"
+            "label": "Service",
+            "value": "Interior & exterior"
           },
           {
-            "label": "Contact",
-            "value": "Phone or email"
+            "label": "Result",
+            "value": "Streak-free finish"
           }
         ]
       },
       {
         "id": 10,
-        "category": "insurance",
-        "question": "Do you work with retail pricing or only insurance claims?",
-        "answer": "We offer both! Whether you prefer to use your insurance coverage or prefer our competitive retail pricing, we have you covered. We provide transparent pricing with no hidden fees regardless of which option you choose.",
+        "category": "washing",
+        "question": "Are you licensed and insured?",
+        "answer": "Absolutely. L&M Services LLP is fully licensed and insured for your protection and peace of mind. We take our professional responsibilities seriously and ensure every job is completed safely and to the highest standard.",
         "metadata": [
           {
-            "label": "Retail pricing",
-            "value": "Competitive & transparent"
+            "label": "Licensed",
+            "value": "Fully licensed"
           },
           {
-            "label": "Insurance claims",
-            "value": "Full assistance provided"
+            "label": "Insured",
+            "value": "Full coverage"
           }
         ]
       }
     ],
     "knowledgeCard": {
       "title": "Still Have Questions?",
-      "description": "Our roofing and solar experts are ready to help with your specific project needs.",
+      "description": "Our exterior cleaning experts are ready to help with your specific project needs.",
       "buttonText": "Contact Our Team",
       "buttonLink": "#contact"
     }
@@ -843,44 +839,44 @@
   "quote": {
     "section": {
       "badge": "GET STARTED",
-      "headline": "Request Your <span class=\"font-black text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary to-primary/80\">Free Consultation</span>",
+      "headline": "Request Your <span class=\"font-black text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary to-primary/80\">Free Estimate</span>",
       "description": "Let our skilled team know how we can assist you and anticipate exceptional service every step of the way. Choose the best way to stay in touch with us."
     },
     "services": [
       {
         "id": 1,
-        "title": "Roof Inspection",
-        "desc": "Thorough property assessment",
+        "title": "Power Washing",
+        "desc": "High-pressure surface cleaning",
         "icon": "⌗"
       },
       {
         "id": 2,
-        "title": "Roof Replacement",
-        "desc": "Full roof installation",
+        "title": "Soft Washing",
+        "desc": "Gentle exterior treatment",
         "icon": "⎔"
       },
       {
         "id": 3,
-        "title": "Solar Panel Services",
-        "desc": "Installation & removal",
+        "title": "Gutter Cleaning",
+        "desc": "Debris removal & brightening",
         "icon": "⌖"
       },
       {
         "id": 4,
-        "title": "Roof Maintenance",
-        "desc": "Tune-ups & cleaning",
+        "title": "Window Cleaning",
+        "desc": "Interior & exterior",
         "icon": "⌘"
       },
       {
         "id": 5,
-        "title": "Gutter Services",
-        "desc": "Cleaning & installation",
+        "title": "House Washing",
+        "desc": "Full exterior wash",
         "icon": "⚡"
       },
       {
         "id": 6,
         "title": "Other Services",
-        "desc": "Skylights, insulation & more",
+        "desc": "Roof, deck, concrete & more",
         "icon": "◈"
       }
     ],
@@ -894,16 +890,16 @@
         "label": "Commercial"
       },
       {
-        "value": "solar",
-        "label": "Solar Services"
+        "value": "softwash",
+        "label": "Soft Washing"
       },
       {
-        "value": "inspection",
-        "label": "Inspection Only"
+        "value": "gutters",
+        "label": "Gutter Services"
       },
       {
-        "value": "maintenance",
-        "label": "Maintenance & Tune-Up"
+        "value": "windows",
+        "label": "Window Cleaning"
       }
     ],
     "timelines": [
@@ -913,129 +909,129 @@
       },
       {
         "value": "standard",
-        "label": "Standard (1-4 weeks)"
+        "label": "Standard (1-2 weeks)"
       },
       {
         "value": "planned",
-        "label": "Planned (1-3 months)"
+        "label": "Planned (2-4 weeks)"
       },
       {
         "value": "future",
-        "label": "Future Project (3+ months)"
+        "label": "Future Project (1+ month)"
       }
     ],
-    "email": "Luis@apexroofingandsolar.com",
+    "email": "estimate@l-mservices.com",
     "success": {
-      "title": "Consultation Request Received",
-      "message": "Your inquiry has been sent to our team at Apex Roofing & Solar.",
-      "response": "We'll respond promptly to schedule your free consultation.",
+      "title": "Estimate Request Received",
+      "message": "Your inquiry has been sent to our team at L&M Services LLP.",
+      "response": "We'll respond promptly with your free estimate.",
       "buttonText": "Close"
     }
   },
   "footer": {
     "company": {
-      "name": "Apex Roofing & Solar",
-      "tagline": "ASCEND TO EXCELLENCE",
-      "description": "Expert roofing and solar solutions for residential and commercial properties. Founded in Dallas, Texas, with a commitment to quality craftsmanship and exceptional customer care."
+      "name": "L&M Services LLP",
+      "tagline": "FREE QUOTE. FAST RESPONSE. GREAT SERVICE.",
+      "description": "Professional power washing, soft washing, gutter cleaning, and window washing for residential and commercial properties. Serving the Greater Philadelphia Area with discipline, teamwork, and a commitment to excellence."
     },
     "services": {
       "title": "Our Services",
       "main": [
         {
-          "label": "Roof Inspections",
-          "href": "/roof-inspection",
-          "icon": "Search"
-        },
-        {
-          "label": "Roof Replacement",
-          "href": "/roof-replacement",
-          "icon": "Home"
-        },
-        {
-          "label": "Shingle Roofing",
-          "href": "/shingle-roofing",
-          "icon": "Home"
-        },
-        {
-          "label": "Metal Roofing",
-          "href": "/metal-roofing",
-          "icon": "Hammer"
-        },
-        {
-          "label": "Flat Roofing",
-          "href": "/flat-roofing",
-          "icon": "Building2"
-        },
-        {
-          "label": "Solar Panel Services",
-          "href": "/solar",
-          "icon": "Sun"
-        },
-        {
-          "label": "Roof Maintenance",
-          "href": "/maintenance",
-          "icon": "Wrench"
-        },
-        {
-          "label": "Gutter Services",
-          "href": "/gutter-services",
+          "label": "Power Washing",
+          "href": "/power-washing",
           "icon": "Droplets"
         },
         {
-          "label": "Skylight Installation",
-          "href": "/skylights",
-          "icon": "CloudSun"
+          "label": "Soft Washing",
+          "href": "/soft-washing",
+          "icon": "Sparkles"
         },
         {
-          "label": "Attic Insulation",
-          "href": "/insulation",
-          "icon": "Thermometer"
+          "label": "Gutter Cleaning",
+          "href": "/gutter-cleaning",
+          "icon": "Wrench"
+        },
+        {
+          "label": "Window Cleaning",
+          "href": "/window-cleaning",
+          "icon": "Sun"
+        },
+        {
+          "label": "House Washing",
+          "href": "/house-washing",
+          "icon": "Home"
+        },
+        {
+          "label": "Roof Cleaning",
+          "href": "/roof-cleaning",
+          "icon": "Shield"
+        },
+        {
+          "label": "Concrete Cleaning",
+          "href": "/concrete-cleaning",
+          "icon": "Building2"
+        },
+        {
+          "label": "Commercial Services",
+          "href": "/commercial",
+          "icon": "Building"
+        },
+        {
+          "label": "Deck & Fence Cleaning",
+          "href": "/deck-fence",
+          "icon": "LayoutGrid"
+        },
+        {
+          "label": "Patio Restoration",
+          "href": "/patio",
+          "icon": "TreePine"
         }
       ],
       "materials": {
         "title": "Service Areas",
         "items": [
           {
-            "label": "Dallas, TX",
-            "href": "/dallas"
+            "label": "King of Prussia, PA",
+            "href": "/king-of-prussia"
           },
           {
-            "label": "Plano, TX",
-            "href": "/plano"
+            "label": "Philadelphia, PA",
+            "href": "/philadelphia"
           },
           {
-            "label": "Richardson, TX",
-            "href": "/richardson"
+            "label": "Wayne, PA",
+            "href": "/wayne"
           },
           {
-            "label": "Garland, TX",
-            "href": "/garland"
+            "label": "Radnor, PA",
+            "href": "/radnor"
           }
         ]
       }
     },
     "contact": {
       "title": "Contact Us",
-      "email": "Luis@apexroofingandsolar.com",
-      "phone": "+1 (469) 396-4022",
-      "address": "695 Main St Ste 400, Lavon, Texas 75166",
+      "email": "estimate@l-mservices.com",
+      "phone": "+1 (215) 346-6027",
+      "address": "King of Prussia, Pennsylvania",
       "emergency": "",
-      "areas": "Dallas • Plano • Richardson • Garland • Mesquite • Lavon & Surrounding Texas Communities"
+      "areas": "King of Prussia • Philadelphia • Wayne • Radnor • Bryn Mawr • Greater Philadelphia Area & Surrounding Communities"
     },
     "certifications": [
       {
         "cert": "Founded",
-        "number": "2023",
+        "number": "2020",
         "icon": "Calendar"
       },
       {
         "cert": "Headquarters",
-        "number": "Dallas, TX",
+        "number": "Greater Philadelphia",
         "icon": "MapPin"
       },
       {
         "cert": "Licensed",
-        "number": "Texas",
+        "number": "Pennsylvania",
         "icon": "Warranty"
       },
       {
@@ -1045,25 +1041,25 @@
       },
       {
         "cert": "Free",
-        "number": "Consultation",
+        "number": "Estimate",
         "icon": "MessageSquare"
       },
       {
-        "cert": "Insurance",
-        "number": "Claim Assistance",
-        "icon": "FileText"
+        "cert": "Fast",
+        "number": "Response",
+        "icon": "Zap"
       }
     ],
     "quickLinks": [
       {
-        "label": "Free Consultation",
+        "label": "Free Estimate",
         "href": "#contact",
         "icon": "Phone"
       },
       {
-        "label": "Insurance Claims",
+        "label": "FAQ",
         "href": "#faq",
-        "icon": "Shield"
+        "icon": "MessageSquare"
       },
       {
         "label": "About Us",
@@ -1075,21 +1071,26 @@
       {
         "platform": "Email",
         "icon": "Mail",
-        "href": "mailto:Luis@apexroofingandsolar.com"
+        "href": "mailto:estimate@l-mservices.com"
       },
       {
         "platform": "Phone",
         "icon": "Phone",
-        "href": "tel:+14693964022"
+        "href": "tel:+12153466027"
       },
       {
-        "platform": "Google",
-        "icon": "Star",
+        "platform": "Instagram",
+        "icon": "Instagram",
+        "href": "#"
+      },
+      {
+        "platform": "Facebook",
+        "icon": "Facebook",
         "href": "#"
       }
     ],
     "bottom": {
-      "copyright": "© 2026 Apex Roofing & Solar",
+      "copyright": "© 2026 L&M Services LLP",
       "rights": "All rights reserved",
       "links": [
         {
@@ -1105,41 +1106,41 @@
           "href": "/sitemap"
         }
       ],
-      "tagline": "ASCEND TO EXCELLENCE"
+      "tagline": "FREE QUOTE. FAST RESPONSE. GREAT SERVICE."
     },
     "marquee": {
       "texts": [
-        "ASCEND TO EXCELLENCE",
-        "ESTABLISHED 2023",
-        "QUALITY CRAFTSMANSHIP • EXCEPTIONAL CARE"
+        "FREE QUOTE. FAST RESPONSE. GREAT SERVICE.",
+        "ESTABLISHED 2020",
+        "LICENSED & INSURED • SERVING GREATER PHILADELPHIA"
       ]
     }
   },
   "leadership": {
     "section": {
-      "badge": "OUR LEADERSHIP",
+      "badge": "OUR TEAM",
       "headline": "Committed to <span class=\"text-primary\">Excellence</span>",
-      "description": "At Apex Roofing & Solar, our leadership is driven by a singular mission: to provide the highest quality roofing and solar solutions with integrity and transparency."
+      "description": "At L&M Services LLP, our team is driven by a singular mission: to provide the highest quality exterior cleaning solutions with the same discipline and attention to detail we developed on the baseball field."
     },
     "ceo": {
-      "name": "Luis Hermocilla",
-      "title": "OWNER & FOUNDER",
+      "name": "Thomas",
+      "title": "FOUNDER & FORMER D1 ATHLETE",
       "quotes": [
-        "I founded Apex Roofing & Solar because I was tired of seeing contractors overpromise and underdeliver. Our commitment is simple: quality craftsmanship, exceptional care, and honest service every time."
+        "We transitioned from the baseball field to the business sector, bringing a unique combination of discipline, teamwork, and competitive drive. We're committed to bringing the same attention to detail to cleaning your home as we did on the diamond."
       ],
       "description": [
-        "After working in the roofing industry for several years, Luis created Apex Roofing & Solar with a mission to be different. He saw a need for a company that prioritizes quality and customer trust above all else.",
-        "Based in Dallas, Texas, Luis leads a team dedicated to providing top-notch service to every homeowner and business owner we serve."
+        "After successful collegiate baseball careers, Thomas and his team launched L&M Services LLP with a mission to be different. They saw a need for an exterior cleaning company that applies athletic-level discipline and work ethic to every project.",
+        "Based in the Greater Philadelphia Area, Thomas leads a team of former D1 athletes dedicated to providing top-notch service to every homeowner and business owner we serve."
       ],
       "social": {
         "linkedin": "#",
-        "email": "Luis@apexroofingandsolar.com"
+        "email": "estimate@l-mservices.com"
       },
       "badges": {
-        "top": "Industry Expert",
+        "top": "D1 Athlete Background",
         "bottom": "Customer Focused"
       },
-      "alt": "Luis Hermocilla - Owner of Apex Roofing & Solar"
+      "alt": "Thomas - Founder of L&M Services LLP"
     }
   }
 }

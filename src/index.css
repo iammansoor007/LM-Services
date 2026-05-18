@@ -1,276 +1,256 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+ @tailwind base;
+ @tailwind components;
+ @tailwind utilities;
 
-@media (min-width: 350px) and (max-width: 750px) {
-  .logooo {
-    transform: translateX(-35px) !important;
-  }
-}
+ @media (min-width: 350px) and (max-width: 750px) {
+   .logooo {
+     transform: translateX(-35px) !important;
+   }
+ }
 
-@layer base {
-  html {
-    scroll-behavior: smooth;
-  }
+ @layer base {
+   html {
+     scroll-behavior: smooth;
+   }
 
-  :root {
-    /* DR PAINT EXACT BRAND THEME */
-    --background: 0 0% 100%;
-    /* White */
+   :root {
+     /* L&M SERVICES BLUE THEME */
 
-    --foreground: 0 0% 0%;
-    /* Pure Black */
+     --background: 0 0% 100%;
+     --foreground: 217 45% 12%;
 
-    --popover-foreground: 0 0% 0%;
-    --card-foreground: 0 0% 0%;
-    --card: 0 0% 100%;
-    --popover: 0 0% 100%;
+     --popover-foreground: 217 45% 12%;
+     --card-foreground: 217 45% 12%;
+     --card: 0 0% 100%;
+     --popover: 0 0% 100%;
 
-    /* OFFICIAL APEX RED */
-    --primary: 0 84% 44%;
-    /* #c41212 */
+     /* PRIMARY NAVY */
+     --primary: 217 78% 18%;
 
-    --primary-foreground: 0 0% 100%;
-    /* White */
+     --primary-foreground: 0 0% 100%;
 
-    /* BLACK / DARK SURFACE */
-    --secondary: 0 0% 7%;
-    /* #121212 */
+     /* SECONDARY BLUE */
+     --secondary: 221 84% 55%;
 
-    --secondary-foreground: 0 0% 100%;
+     --secondary-foreground: 0 0% 100%;
 
-    /* RED CTA */
-    --accent: 0 84% 44%;
-    /* Strong professional red */
+     /* ACCENT ICE BLUE */
+     --accent: 199 100% 78%;
 
-    --accent-foreground: 0 0% 100%;
-    /* White */
+     --accent-foreground: 217 78% 18%;
 
-    --muted: 0 0% 100%;
-    --muted-foreground: 0 0% 45%;
-    --border: 0 0% 89%;
-    --input: 0 0% 100%;
+     --muted: 210 30% 97%;
+     --muted-foreground: 217 18% 40%;
+     --border: 214 20% 88%;
+     --input: 0 0% 100%;
 
-    --destructive: 0 78% 52%;
+     --destructive: 0 72% 52%;
+     --destructive-foreground: 0 0% 100%;
 
-    --destructive-foreground: 0 0% 100%;
+     --ring: 221 84% 55%;
 
-    --ring: 0 84% 44%;
+     --radius: 0.55rem;
 
-    --radius: 0.55rem;
+     /* CUSTOM BRAND */
+     --deep: 217 78% 18%;
+     --surface: 0 0% 100%;
+     --surface-light: 210 30% 97%;
+     --text-dark: 217 45% 12%;
 
-    /* CUSTOM BRAND */
-    --deep: 0 0% 7%;
-    --surface: 0 0% 100%;
-    --surface-light: 0 0% 100%;
-    --text-dark: 0 0% 7%;
+     /* SIDEBAR */
+     --sidebar-background: 217 78% 18%;
+     --sidebar-foreground: 0 0% 100%;
 
-    /* SIDEBAR */
-    --sidebar-background: 0 0% 7%;
-    --sidebar-foreground: 0 0% 100%;
+     --sidebar-primary: 221 84% 55%;
+     --sidebar-primary-foreground: 0 0% 100%;
 
-    --sidebar-primary: 0 84% 44%;
-    --sidebar-primary-foreground: 0 0% 100%;
+     --sidebar-accent: 199 100% 78%;
+     --sidebar-accent-foreground: 217 78% 18%;
 
-    --sidebar-accent: 0 84% 44%;
-    --sidebar-accent-foreground: 0 0% 100%;
+     --sidebar-border: 217 40% 24%;
 
-    --sidebar-border: 220 25% 18%;
+     --sidebar-ring: 221 84% 55%;
 
-    --sidebar-ring: 0 84% 44%;
+     /* TYPOGRAPHY */
+     --font-heading: 'Space Grotesk', sans-serif;
+     --font-body: 'DM Sans', sans-serif;
+   }
 
-    /* TYPOGRAPHY */
-    --font-heading: 'Space Grotesk', sans-serif;
-    --font-body: 'DM Sans', sans-serif;
-  }
+   @font-face {
+     font-family: 'Space Grotesk';
+     font-display: optional;
+   }
+ }
 
-  @font-face {
-    font-family: 'Space Grotesk';
-    font-display: optional;
-  }
-}
+ @layer base {
+   * {
+     @apply border-border;
+   }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
+   html {
+     scroll-behavior: smooth;
+   }
 
-  html {
-    scroll-behavior: smooth;
-  }
+   body {
+     @apply bg-background text-foreground;
+     font-family: var(--font-body);
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+   }
 
-  body {
-    @apply bg-background text-foreground;
-    font-family: var(--font-body);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+   #root {
+     position: relative;
+     width: 100%;
+     min-height: 100vh;
+   }
 
-  #root {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-  }
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   h6 {
+     font-family: var(--font-heading);
+     letter-spacing: -0.03em;
+     line-height: 1.05;
+   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--font-heading);
-    letter-spacing: -0.03em;
-    line-height: 1.05;
-  }
+   section {
+     position: relative;
+   }
 
-  section {
-    position: relative;
-    content-visibility: auto;
-    contain-intrinsic-size: 1px 1000px;
-  }
+   #hero,
+   .navbar,
+   header {
+     content-visibility: visible !important;
+     will-change: transform, opacity;
+   }
+ }
 
-  /* Exempt hero and navbar from content-visibility auto to ensure they are always ready */
-  #hero, 
-  .navbar,
-  header {
-    content-visibility: visible !important;
-    will-change: transform, opacity;
-  }
-}
+ @layer utilities {
+   .text-balance {
+     text-wrap: balance;
+   }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+   .section-padding {
+     @apply px-6 md:px-12 lg:px-24 py-20 md:py-32;
+   }
 
-  .section-padding {
-    @apply px-6 md:px-12 lg:px-24 py-20 md:py-32;
-  }
+   .heading-xl {
+     @apply text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-medium;
+     font-family: var(--font-heading);
+     letter-spacing: -0.04em;
+     line-height: 0.95;
+   }
 
-  .heading-xl {
-    @apply text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-medium;
-    font-family: var(--font-heading);
-    letter-spacing: -0.04em;
-    line-height: 0.95;
-  }
+   .heading-lg {
+     @apply text-4xl md:text-5xl lg:text-6xl font-medium;
+     font-family: var(--font-heading);
+     letter-spacing: -0.03em;
+     line-height: 1;
+   }
 
-  .heading-lg {
-    @apply text-4xl md:text-5xl lg:text-6xl font-medium;
-    font-family: var(--font-heading);
-    letter-spacing: -0.03em;
-    line-height: 1;
-  }
+   .heading-md {
+     @apply text-2xl md:text-3xl lg:text-4xl font-medium;
+     font-family: var(--font-heading);
+     letter-spacing: -0.02em;
+     line-height: 1.1;
+   }
 
-  .heading-md {
-    @apply text-2xl md:text-3xl lg:text-4xl font-medium;
-    font-family: var(--font-heading);
-    letter-spacing: -0.02em;
-    line-height: 1.1;
-  }
+   .body-lg {
+     @apply text-lg md:text-xl;
+     font-family: var(--font-body);
+     line-height: 1.6;
+   }
 
-  .body-lg {
-    @apply text-lg md:text-xl;
-    font-family: var(--font-body);
-    line-height: 1.6;
-  }
+   .body-sm {
+     @apply text-sm md:text-base;
+     font-family: var(--font-body);
+     line-height: 1.5;
+   }
 
-  .body-sm {
-    @apply text-sm md:text-base;
-    font-family: var(--font-body);
-    line-height: 1.5;
-  }
+   .accent-line {
+     @apply w-14 h-1 rounded-full;
+     background: hsl(var(--primary));
+   }
 
-  /* BLUE BRAND LINE */
-  .accent-line {
-    @apply w-14 h-1 rounded-full;
-    background: hsl(var(--primary));
-  }
+   .grid-editorial {
+     @apply grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8;
+   }
 
-  .grid-editorial {
-    @apply grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8;
-  }
+   .text-gradient {
+     background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 70%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+   }
 
-  /* OFFICIAL BRAND TEXT */
-  .text-gradient {
-    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 70%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+   .bg-gradient-cta {
+     background: hsl(var(--primary));
+     color: white;
+   }
 
-  /* PRIMARY BLUE BUTTON */
-  .bg-gradient-cta {
-    background: hsl(var(--primary));
-    color: white;
-  }
+   .drpaint-btn-primary {
+     background: hsl(var(--accent));
+     color: white;
+     transition: all 0.35s ease;
+     border-radius: 0.75rem;
+     font-weight: 600;
+   }
 
-  /* RED CTA BUTTON */
-  .drpaint-btn-primary {
-    background: hsl(var(--accent));
-    color: white;
-    transition: all 0.35s ease;
-    border-radius: 0.75rem;
-    font-weight: 600;
-  }
+   .drpaint-btn-primary:hover {
+     background: hsl(var(--accent) / 0.9);
+     transform: translateY(-3px);
+     box-shadow: 0 12px 28px rgba(30, 94, 255, 0.28);
+   }
 
-  .drpaint-btn-primary:hover {
-    background: hsl(var(--accent) / 0.9);
-    transform: translateY(-3px);
-    box-shadow: 0 12px 28px rgba(214, 40, 40, 0.28);
-  }
+   .drpaint-btn-secondary {
+     background: hsl(var(--primary));
+     color: white;
+     transition: all 0.35s ease;
+     border-radius: 0.75rem;
+     font-weight: 600;
+   }
 
-  /* BLUE SECONDARY BUTTON */
-  .drpaint-btn-secondary {
-    background: hsl(var(--primary));
-    color: white;
-    transition: all 0.35s ease;
-    border-radius: 0.75rem;
-    font-weight: 600;
-  }
+   .drpaint-btn-secondary:hover {
+     background: hsl(var(--primary) / 0.9);
+     transform: translateY(-2px);
+   }
 
-  .drpaint-btn-secondary:hover {
-    background: hsl(var(--primary) / 0.9);
-    transform: translateY(-2px);
-  }
+   .drpaint-card {
+     background: white;
+     border: 1px solid rgba(30, 94, 255, 0.08);
+     box-shadow: 0 10px 30px rgba(17, 24, 39, 0.06);
+     border-radius: 1rem;
+   }
 
-  /* CARD SYSTEM */
-  .drpaint-card {
-    background: white;
-    border: 1px solid rgba(43, 90, 147, 0.08);
-    box-shadow: 0 10px 30px rgba(17, 24, 39, 0.06);
-    border-radius: 1rem;
-  }
+   .drpaint-shadow {
+     box-shadow: 0 10px 25px rgba(30, 94, 255, 0.12);
+   }
 
-  .drpaint-shadow {
-    box-shadow: 0 10px 25px rgba(43, 90, 147, 0.12);
-  }
+   .navbar-glass {
+     background: rgba(255, 255, 255, 0.92);
+     backdrop-filter: blur(8px);
+     border-bottom: 1px solid rgba(30, 94, 255, 0.08);
+   }
 
-  /* NAVBAR */
-  .navbar-glass {
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(43, 90, 147, 0.08);
-  }
+   .hero-overlay {
+     background: linear-gradient(135deg,
+         rgba(11, 31, 58, 0.92),
+         rgba(30, 94, 255, 0.82));
+   }
 
-  /* HERO OVERLAY */
-  .hero-overlay {
-    background: linear-gradient(135deg,
-        rgba(196, 18, 18, 0.9),
-        rgba(0, 0, 0, 0.85));
-  }
+   .red-accent {
+     color: hsl(var(--accent));
+   }
 
-  /* RED HIGHLIGHT */
-  .red-accent {
-    color: hsl(var(--accent));
-  }
+   .blue-accent {
+     color: hsl(var(--primary));
+   }
 
-  .blue-accent {
-    color: hsl(var(--primary));
-  }
-
-  .will-change-gpu {
-    will-change: transform, opacity;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    perspective: 1000px;
-  }
-}
+   .will-change-gpu {
+     will-change: transform, opacity;
+     transform: translateZ(0);
+     backface-visibility: hidden;
+     perspective: 1000px;
+   }
+ }
