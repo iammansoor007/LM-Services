@@ -7,28 +7,28 @@ import {
 } from "lucide-react";
 import completeData from "../src/data/completeData.json";
 import WaterDivider from "./ui/WaterDivider";
-import roofInspection from "@/assets/roofinspection.jpg";
-import solarServices from "@/assets/solar.jpg";
-import roofMaintenance from "@/assets/roofmaintaince.jpg";
-import shingleRoofing from "@/assets/shingleroofing.jpg";
-import metalRoofing from "@/assets/metalroofing.jpg";
-import flatRoofing from "@/assets/flatroofing.jpg";
-import skylightInstallation from "@/assets/skylight.jpg";
-import atticInsulation from "@/assets/attic.jpg";
-import gutterServices from "@/assets/gutter.jpg";
-import roofRepairImg from "@/assets/roofingbg.jpg";
+import powerWashing from "@/assets/powerwashing.jpeg";
+import softWashing from "@/assets/softwashing.jpeg";
+import gutterCleaning from "@/assets/guttercleaning.jpeg";
+import windowCleaning from "@/assets/windowcleaning.jpeg";
+import houseWashing from "@/assets/housecleaning.jpeg";
+import roofCleaning from "@/assets/roofcleaning.jpeg";
+import concreteCleaning from "@/assets/concretecleaning.jpeg";
+import commercialCleaning from "@/assets/commercialcleaning.jpeg";
+import deckAndFenceCleaning from "@/assets/deckandfencelceaning.jpeg";
+import patioRestoration from "@/assets/patiorestoration.jpeg";
 
 const serviceImageMap: Record<string, string> = {
-  "01": roofInspection,
-  "02": solarServices,
-  "03": roofMaintenance,
-  "04": shingleRoofing,
-  "05": metalRoofing,
-  "06": flatRoofing,
-  "07": skylightInstallation,
-  "08": atticInsulation,
-  "09": gutterServices,
-  "10": roofRepairImg,
+  "01": powerWashing,
+  "02": softWashing,
+  "03": gutterCleaning,
+  "04": windowCleaning,
+  "05": houseWashing,
+  "06": roofCleaning,
+  "07": concreteCleaning,
+  "08": commercialCleaning,
+  "09": deckAndFenceCleaning,
+  "10": patioRestoration,
 };
 
 const iconMap: Record<string, React.ElementType> = {
