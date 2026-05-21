@@ -1,8 +1,13 @@
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import { useRef, useEffect, useState, useCallback, useMemo, memo } from "react";
+import { FiArrowRight } from "react-icons/fi";
 import AboutImg from "@/assets/aboutimagelm.png";
 import completeData from "../src/data/completeData.json";
 import WaterDivider from "./ui/WaterDivider";
+
+const iconComponents = {
+  FiArrowRight: FiArrowRight,
+};
 
 const Counter = memo(
   ({
@@ -124,6 +129,7 @@ StatCard.displayName = "StatCard";
 export default function AboutSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const shouldReduceMotion = useReducedMotion();
+  const [hoveredButton, setHoveredButton] = useState<number | null>(null);
 
   const {
     badge,
@@ -295,112 +301,33 @@ export default function AboutSection() {
             )}
 
             <motion.div variants={variants} custom={6} className="pt-2 w-full">
-              <div className="flex flex-row sm:flex-col md:flex-row flex-wrap items-center  gap-3 sm:gap-4 md:gap-4 w-full">
-                {buttons.map((button: any, idx: number) =>
-                  button.primary ? (
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-4 w-full">
+                {buttons.map((button: any, idx: number) => {
+                  const isFirst = idx === 0;
+                  const isHovered = hoveredButton !== null;
+                  const useSecondaryStyle = (isFirst && isHovered) || (!isFirst && !isHovered);
+
+                  return (
                     <motion.a
                       key={idx}
                       href={button.href}
-                      whileHover={{ scale: 1.03, y: -2 }}
-                      whileTap={{ scale: 0.98 }}
-                      className="
-            group relative overflow-hidden
-            w-full sm:w-auto md:w-auto
-            min-w-[180px] sm:min-w-[200px] md:min-w-[180px] lg:min-w-[200px]
-            px-5 sm:px-8 md:px-6 lg:px-8 py-3 sm:py-4 md:py-3.5 lg:py-4
-            rounded-2xl
-            inline-flex items-center justify-center gap-2
-            bg-primary
-            text-white
-            border border-primary
-            font-semibold sm:font-bold
-            text-sm sm:text-base
-            shadow-primary
-            transition-all duration-300
-            hover:text-white
-            hover:shadow-primary
-          "
+                      onMouseEnter={() => setHoveredButton(idx)}
+                      onMouseLeave={() => setHoveredButton(null)}
+                      className={`
+                        group relative overflow-hidden px-8 py-4 rounded-2xl w-full sm:w-auto 
+                        inline-flex items-center justify-center gap-3 text-base font-bold transition-all duration-500
+                        ${useSecondaryStyle
+                          ? "bg-black/5 text-black hover:bg-black hover:text-white border border-black/10 hover:border-black shadow-md backdrop-blur-sm"
+                          : "bg-primary text-white shadow-[0_0_40px_-10px_rgba(var(--primary-rgb),0.5)] border border-primary/50"
+                        }
+                        hover:scale-[1.02] active:scale-95
+                      `}
                     >
-                      <span
-                        className="
-              absolute inset-0 opacity-0 group-hover:opacity-100
-              bg-gradient-to-r from-white/20 via-transparent to-white/10
-              transition-opacity duration-100
-            "
-                      />
-
-                      <span className="relative z-10 flex items-center gap-2">
-                        {button.text}
-
-                        <svg
-                          className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:translate-x-1"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M17 8l4 4m0 0l-4 4m4-4H3"
-                          />
-                        </svg>
-                      </span>
+                      <span className="relative z-10">{button.text}</span>
+                      <FiArrowRight className="w-5 h-5 relative z-10 transition-transform duration-300 group-hover:translate-x-1" />
                     </motion.a>
-                  ) : (
-                    <motion.a
-                      key={idx}
-                      href={button.href}
-                      whileHover={{ scale: 1.03, y: -2 }}
-                      whileTap={{ scale: 0.98 }}
-                      className="
-            group relative overflow-hidden
-            w-full sm:w-auto md:w-auto
-            min-w-[180px] sm:min-w-[200px] md:min-w-[180px] lg:min-w-[200px]
-            px-5 sm:px-8 md:px-6 lg:px-8 py-3 sm:py-4 md:py-3.5 lg:py-4
-            rounded-2xl
-            inline-flex items-center justify-center gap-2
-            bg-white
-            text-black
-            border-2 border-primary
-            font-semibold sm:font-bold
-            text-sm sm:text-base
-            shadow-primary/10
-            transition-all duration-300
-            hover:bg-primary
-            hover:text-white
-            hover:border-primary
-            hover:shadow-primary
-          "
-                    >
-                      <span
-                        className="
-              absolute inset-0 opacity-0 group-hover:opacity-100
-              bg-gradient-to-r from-white/10 via-transparent to-white/5
-              transition-opacity duration-300
-            "
-                      />
-
-                      <span className="relative z-10 flex items-center gap-2">
-                        {button.text}
-
-                        <svg
-                          className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:rotate-45"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M7 7l7-7M7 7l7 7M7 7h10"
-                          />
-                        </svg>
-                      </span>
-                    </motion.a>
-                  ),
-                )}
+                  );
+                })}
               </div>
             </motion.div>
 
